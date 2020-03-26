@@ -1,0 +1,17 @@
+{
+  "name": "mylapotech",
+  "version": "1.0.0",
+  "description": "A Redesign Of The Official Laspotech&#39;s Website",
+  "author": "Olajide A. Hammed",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
