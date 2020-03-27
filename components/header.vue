@@ -7,7 +7,7 @@
             <img
               width="90"
               height="90"
-              src="/images/logo-alpha.png"
+              src="~~/assets/images/logo-alpha.png"
               class="logo d-inline-block align-top"
               alt
             />
