@@ -8,9 +8,8 @@
 
 
 <script>
-import TheHeader from "~/components/header.vue";
-import TheFooter from "~/components/footer.vue";
-
+import TheHeader from "~~/pages/partials/header.vue";
+import TheFooter from "~~/pages/partials/footer.vue";
 export default {
   components: {
     TheHeader,
