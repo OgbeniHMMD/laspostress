@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import TheSlider from "~/components/slider.vue";
+import TheSlider from "~~/pages/partials/slider.vue";
 
 export default {
   components: {
