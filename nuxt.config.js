@@ -47,6 +47,6 @@ export default {
   },
 
   generate: {
-    dir: "docs" //Generate to 'docs' instead of 'dist'
+    dir: "dist"
   }
 };
