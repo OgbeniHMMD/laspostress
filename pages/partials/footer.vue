@@ -58,6 +58,11 @@
         </div>
       </div>
     </div>
+
+    <!--SCRIPTS-->
+    <script src="/dependencies/jquery.min.js" />
+    <script src="/dependencies/bootstrap.bundle.min.js" />
+    <!--SCRIPTS END-->
   </footer>
 </template>
 
