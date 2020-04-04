@@ -33,3 +33,21 @@ header {
     }
   }
 }
+
+.event-thumb {
+  min-width: 75px;
+  min-height: 75px;
+  max-width: 75px;
+  max-height: 75px;
+}
+
+.thumb {
+  max-height: 75px;
+}
+
+@include media-breakpoint-up(md) {
+
+.thumb {
+  max-height: 150px;
+}
+}
