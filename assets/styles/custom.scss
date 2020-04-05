@@ -46,8 +46,7 @@ header {
 }
 
 @include media-breakpoint-up(md) {
-
-.thumb {
-  max-height: 150px;
-}
+  .thumb {
+    max-height: 150px;
+  }
 }
