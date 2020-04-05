@@ -23,8 +23,8 @@
         </div>
       </section>
 
-      <section class="ml-auto h6 m-0">
-        <div class="nav d-flex justify-content-between">
+      <section class="ml-auto h6 m-0 py-2 py-md-0">
+        <div class="d-flex flex-wrap justify-content-between">
           <a class="nav-link text-light" href="#">Home</a>
           <a class="nav-link text-light" href="#">Feature</a>
           <a class="nav-link text-light" href="#">Pricing</a>
