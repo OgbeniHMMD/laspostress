@@ -23,7 +23,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ["@/assets/styles/importer.scss"],
+  css: [],
   /*
    ** Plugins to load before mounting the App
    */
@@ -43,11 +43,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {},
-    extractCss: true
-  },
-
-  generate: {
-    dir: "dist"
+    extend(config, ctx) {}
   }
 };

@@ -2,36 +2,13 @@ body {
   //background-color: pink;
   font-size: 14px;
   font-family: "Roboto Condensed", $font-family-sans-serif;
-  src: url("fonts/RobotoCondensed-Regular.ttf");
+  src: url("/assets/styles/fonts/RobotoCondensed-Regular.ttf");
 }
 
 .border- {
   background-image: linear-gradient(#ff9d2f, #ff6126);
   border-bottom-left-radius: 50% 20%;
   border-bottom-right-radius: 50% 20%;
-}
-
-@include media-breakpoint-up(sm) {
-  .slant {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
-  }
-}
-
-//hover on dropdown
-header {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  .dropdown > .dropdown-toggle:active {
-    pointer-events: none; /*Without this, clicking will make it sticky*/
-  }
-
-  .dropdown-menu {
-    a {
-      color: $light;
-    }
-  }
 }
 
 .event-thumb {
@@ -45,8 +22,23 @@ header {
   max-height: 75px;
 }
 
+.slant {
+  -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+}
+
 @include media-breakpoint-up(md) {
   .thumb {
     max-height: 150px;
+  }
+
+  //hover on dropdown
+  header {
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown > .dropdown-toggle:active {
+      pointer-events: none; /*Without this, clicking will make it sticky*/
+    }
   }
 }
