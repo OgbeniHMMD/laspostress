@@ -1,6 +1,6 @@
 <template>
   <section id="carouselIndicators" class="carousel slide border-top clearfix" data-ride="carousel">
-    <ol class="carousel-indicators">
+    <ol class="carousel-indicators d-none d-md-flex">
       <li
         v-for="slide in slides"
         :key="slide.id"
@@ -12,7 +12,7 @@
 
     <div class="carousel-inner">
       <div v-for="slide in slides" :key="slide.id" :class="slide.status" class="carousel-item">
-        <img class="d-block w-100" src="~/assets/images/sliders/001.jpg" :alt="slide.title" />
+        <img class="d-block w-100" :src="slide.img" :alt="slide.title" />
         <div v-if="slide.title || slide.description" class="carousel-caption d-none d-md-block">
           <h5>{{slide.title}}</h5>
           <p>{{slide.description}}</p>
@@ -42,7 +42,7 @@ export default {
         {
           id: "00",
           status: "active", //NB: ONE Item MUST be active  **** require(`${slide.img}`)
-          img: "001.jpg",
+          img: "/slides/slide000.jpg",
           title: "Dummmy Title 000",
           slug: "dummy-carousel-slug",
           description:
@@ -50,13 +50,13 @@ export default {
         },
         {
           id: "01",
-          img: "002.jpg",
+          img: "/slides/slide001.jpg",
           title: "Dummmy Title 001",
           slug: "dummy-carousel-slug"
         },
         {
           id: "02",
-          img: "003.jpg",
+          img: "/slides/slide002.jpg",
           title: "Dummmy Title 002",
           slug: "dummy-carousel-slug",
           description:
@@ -64,10 +64,9 @@ export default {
         },
         {
           id: "03",
-          img: "004.jpg",
+          img: "/slides/slide003.jpg",
           title: "Dummmy Title 003",
           slug: "dummy-carousel-slug",
-          img: "",
           description:
             "WDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         }
