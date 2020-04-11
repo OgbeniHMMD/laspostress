@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <div class="text-white align-self-center pr-sm-5">
+      <div class="text-white align-self-center pl-md-3">
         <div class="h2 d-none d-sm-block">
           Lagos State Polytechnic
           <div class="h4 d-none d-md-block">The Polytechnic of Excellence</div>
@@ -24,37 +24,7 @@
 
       <div class="ml-auto">
         <button
-          class="navbar-toggler bg-primary border-0 p-2"
-          type="button"
-          data-toggle="collapse"
-          data-target="#search-navbar"
-          aria-controls="search-navbar"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <svg
-            class="bi bi-search"
-            width="1.3em"
-            height="1.3em"
-            viewBox="0 0 16 16"
-            fill="white"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
-              clip-rule="evenodd"
-            />
-            <path
-              fill-rule="evenodd"
-              d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </button>
-
-        <button
-          class="navbar-toggler border-0 p-2 mr-2"
+          class="navbar-toggler btn bg-secondary border-light rounded p-3 mr-2"
           width="40"
           height="40"
           type="button"
@@ -64,38 +34,27 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <svg viewBox="0 0 100 80" width="1.3em" height="1.3em" fill="white">
-            <rect width="100" height="20" />
-            <rect y="30" width="100" height="20" />
-            <rect y="60" width="100" height="20" />
-          </svg>
+          <span class="navbar-toggler-icon"></span>
         </button>
       </div>
 
-      <div
-        id="search-navbar"
-        class="collapse navbar-collapse justify-content-end ml-auto h6 m-0 py-2 py-md-0"
-      >
-        <div class="input-group input-group-lg nav-item px-2">
+      <div id="search-navbar" class="ml-auto h6 m-0 p-2 col-12 col-lg-auto">
+        <div class="input-group input-group-lg nav-item">
           <input
             type="search"
-            class="form-control border-light"
+            class="form-control"
             placeholder="Search"
             aria-label="Search"
             aria-describedby="button-addon1"
           />
           <div class="input-group-append">
-            <button
-              class="btn bg-secondary btn-outline-light px-md-5"
-              type="button"
-              id="button-addon1"
-            >
+            <button class="btn bg-light" type="button" id="button-addon1">
               <svg
                 class="bi bi-search"
-                width="1.3em"
-                height="1.3em"
+                width="1em"
+                height="1em"
                 viewBox="0 0 16 16"
-                fill="White"
+                fill="CurrentColor"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path

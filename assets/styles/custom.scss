@@ -4,11 +4,6 @@ body {
   src: url("/assets/styles/fonts/RobotoCondensed-Regular.ttf");
 }
 
-.border- {
-  background-image: linear-gradient(#ff9d2f, #ff6126);
-  border-bottom-left-radius: 50% 20%;
-  border-bottom-right-radius: 50% 20%;
-}
 
 .event-thumb {
   min-width: 75px;
@@ -17,22 +12,32 @@ body {
   max-height: 75px;
 }
 
+//News Thumbnails
 .thumb {
   max-height: 75px;
 }
 
-//slant the logo
+
+//The slant around the Logo
 .slant {
   -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
 }
 
+//Add shadows to the carousel text
+.carousel-caption {
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+
+
 @include media-breakpoint-up(md) {
+  //News Thumbnails
   .thumb {
     max-height: 150px;
   }
 
-  //hover on dropdown
+  //Hover on dropdown
   header {
     .dropdown:hover .dropdown-menu {
       display: block;
@@ -41,9 +46,4 @@ body {
       pointer-events: none; /*Without this, clicking will make it sticky*/
     }
   }
-}
-
-//add shadows to the carousel text
-.carousel-caption {
-  text-shadow: black 0.1em 0.1em 0.2em;
 }
