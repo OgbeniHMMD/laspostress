@@ -1,5 +1,4 @@
 body {
-  //background-color: pink;
   font-size: 14px;
   font-family: "Roboto Condensed", $font-family-sans-serif;
   src: url("/assets/styles/fonts/RobotoCondensed-Regular.ttf");
@@ -22,6 +21,7 @@ body {
   max-height: 75px;
 }
 
+//slant the logo
 .slant {
   -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
@@ -41,4 +41,9 @@ body {
       pointer-events: none; /*Without this, clicking will make it sticky*/
     }
   }
+}
+
+//add shadows to the carousel text
+.carousel-caption {
+  text-shadow: black 0.1em 0.1em 0.2em;
 }

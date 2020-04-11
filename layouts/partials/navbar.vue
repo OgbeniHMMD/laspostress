@@ -1,7 +1,7 @@
 <template>
   <header class="text-uppercase m-0 p-0">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary align-items-center p-0 pr-sm-3">
-      <section class="slant p-1 pl-3 pr-5 bg-light align-self-start p-auto">
+      <div class="slant p-1 pl-sm-3 pr-5 bg-light align-self-start p-auto">
         <div class="d-flex align-items-center">
           <a href="/">
             <img
@@ -13,47 +13,122 @@
             />
           </a>
         </div>
-      </section>
+      </div>
 
-      <section class="text-white align-self-center pr-5">
+      <div class="text-white align-self-center pr-sm-5">
         <div class="h2 d-none d-sm-block">
           Lagos State Polytechnic
           <div class="h4 d-none d-md-block">The Polytechnic of Excellence</div>
         </div>
-      </section>
+      </div>
 
-      <div class="ml-auto pr-3">
+      <div class="ml-auto">
         <button
-          class="navbar-toggler border-0"
+          class="navbar-toggler bg-primary border-0 p-2"
           type="button"
           data-toggle="collapse"
-          data-target="#navbar000"
-          aria-controls="navbar000"
+          data-target="#search-navbar"
+          aria-controls="search-navbar"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon">
-            <span class="icon"></span>
-          </span>
+          <svg
+            class="bi bi-search"
+            width="1.3em"
+            height="1.3em"
+            viewBox="0 0 16 16"
+            fill="white"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
+              clip-rule="evenodd"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+
+        <button
+          class="navbar-toggler border-0 p-2 mr-2"
+          width="40"
+          height="40"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar01"
+          aria-controls="navbar01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <svg viewBox="0 0 100 80" width="1.3em" height="1.3em" fill="white">
+            <rect width="100" height="20" />
+            <rect y="30" width="100" height="20" />
+            <rect y="60" width="100" height="20" />
+          </svg>
         </button>
       </div>
 
-      <section
-        id="navbar000"
+      <div
+        id="search-navbar"
         class="collapse navbar-collapse justify-content-end ml-auto h6 m-0 py-2 py-md-0"
       >
-        <ul class="navbar-nav">
-          <li v-for="menu in menu000" :key="menu.id" class="nav-item mx-3">
-            <a v-if="!menu.children" :href="menu.slug" class="nav-link text-light h6">{{menu.title}}</a>
+        <div class="input-group input-group-lg nav-item px-2">
+          <input
+            type="search"
+            class="form-control border-light"
+            placeholder="Search"
+            aria-label="Search"
+            aria-describedby="button-addon1"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn bg-secondary btn-outline-light px-md-5"
+              type="button"
+              id="button-addon1"
+            >
+              <svg
+                class="bi bi-search"
+                width="1.3em"
+                height="1.3em"
+                viewBox="0 0 16 16"
+                fill="White"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
+                  clip-rule="evenodd"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-            <div v-else :key="menu.id" class="nav-link dropdown">
+    <nav class="navbar navbar-expand-lg navbar-dark m-0 p-0">
+      <div id="navbar01" class="collapse navbar-collapse bg-secondary border-top">
+        <ul class="navbar-nav justify-content-around h5 m-0 p-1">
+          <li v-for="menu in menu001" :key="menu.id" class="nav-item mx-3">
+            <a v-if="!menu.children" :href="menu.slug" class="nav-link text-light h5">{{menu.title}}</a>
+
+            <div v-else class="nav-link dropdown">
               <a
                 role="button"
                 :href="menu.slug"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
-                class="nav-link dropdown-toggle text-light h6 p-0"
+                class="nav-link dropdown-toggle text-light h5 p-0"
               >{{menu.title}}</a>
 
               <div
@@ -73,37 +148,7 @@
             </div>
           </li>
         </ul>
-      </section>
-    </nav>
-
-    <nav class="bg-secondary border-top text-uppercase">
-      <section class="container-fluid">
-        <div class="d-flex flex-wrap justify-content-around h5 m-0 p-1">
-          <span class="dropdown">
-            <a
-              class="nav-link dropdown-toggle text-light"
-              href="#"
-              role="button"
-              aria-haspopup="true"
-              data-toggle="dropdown"
-              aria-expanded="false"
-            >Admission</a>
-            <div
-              class="dropdown-menu bg-secondary border-light rounded-0"
-              aria-labelledby="dropdown002"
-            >
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </span>
-          <a class="nav-link text-light" href="#about">Research</a>
-          <a class="nav-link text-light" href="#about">Gallery</a>
-          <a class="nav-link text-light" href="#contact">News & Events</a>
-          <a class="nav-link text-light" href="#contact">About</a>
-        </div>
-      </section>
+      </div>
     </nav>
   </header>
 </template>
@@ -115,37 +160,68 @@
 export default {
   data: function() {
     return {
-      menu000: [
+      menu001: [
         {
-          id: "00",
-          title: "Dummmy Title 001",
+          title: "Admissions",
           slug: "dummy-carousel-slug",
           children: [
-            { title: "Child Title 1", slug: "dummy-children-slug" },
+            { title: "National Diploma", slug: "dummy-children-slug" },
+            { title: "Higher National Diploma", slug: "dummy-children-slug" },
             { divider: "-" },
-            { title: "Child Title 2", slug: "dummy-children-slug" },
-            { title: "Child Title 3", slug: "dummy-children-slug" },
-            { title: "Child Title 3", slug: "dummy-children-slug" },
-            { title: "Child Title 3", slug: "dummy-children-slug" }
+            {
+              title: "School Of Part-time Studies",
+              slug: "dummy-children-slug"
+            }
           ]
         },
-        { title: "Dummmy Title 002", slug: "dummy-carousel-slug" },
+        {
+          title: "Portals",
+          slug: "dummy-carousel-slug",
+          children: [
+            { title: "Application portal", slug: "dummy-children-slug" },
+            { title: "Post UTME portal", slug: "dummy-children-slug" },
+            { divider: "-" },
+            { title: "Student Portal", slug: "dummy-children-slug" },
+            { divider: "-" },
+            { title: "Staff Portal", slug: "dummy-children-slug" },
+            { title: "Staff Appraisal", slug: "dummy-children-slug" },
+            { divider: "-" },
+            { title: "PT Lecturing Form", slug: "dummy-children-slug" },
+            { divider: "-" },
+            { title: "LaspoKonsult", slug: "dummy-children-slug" }
+          ]
+        },
+        { title: "Research", slug: "dummy-carousel-slug" },
         {
           id: "03",
           title: "Documents",
-          slug: "dummy-carousel-slug"
-        },
-        {
-          id: "04",
-          title: "Quick Links",
           slug: "dummy-carousel-slug",
           children: [
-            { title: "Child Title 1", slug: "dummy-children-slug" },
+            { title: "Brochure", slug: "dummy-children-slug" },
+            { title: "Harmonized Curriculum", slug: "dummy-children-slug" },
+            {
+              title: "CCE Examinations Time-Table 18/19 Acad. Sess.",
+              slug: "dummy-children-slug"
+            },
+            {
+              title: "Procedure for Registration 2019/2020",
+              slug: "dummy-children-slug"
+            },
+            { divider: "-" },
+            { title: "FAQ", slug: "dummy-children-slug" }
+          ]
+        },
+        { title: "News & Event", slug: "dummy-carousel-slug" },
+        {
+          title: "About",
+          slug: "dummy-carousel-slug",
+          children: [
+            { title: "Mission & Vission", slug: "dummy-children-slug" },
             { title: "Child Title 2", slug: "dummy-children-slug" },
             { title: "Child Title 3", slug: "dummy-children-slug" },
             { title: "Child Title 3", slug: "dummy-children-slug" },
             { divider: "-" },
-            { title: "Child Title 3", slug: "dummy-children-slug" }
+            { title: "FAQ", slug: "dummy-children-slug" }
           ]
         }
       ]
