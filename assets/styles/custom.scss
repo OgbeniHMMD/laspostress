@@ -4,7 +4,6 @@ body {
   src: url("/assets/styles/fonts/RobotoCondensed-Regular.ttf");
 }
 
-
 .event-thumb {
   min-width: 75px;
   min-height: 75px;
@@ -17,7 +16,6 @@ body {
   max-height: 75px;
 }
 
-
 //The slant around the Logo
 .slant {
   -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
@@ -26,10 +24,8 @@ body {
 
 //Add shadows to the carousel text
 .carousel-caption {
-  text-shadow: black 0.1em 0.1em 0.2em;
+  text-shadow: black 0.2em 0.2em 0.5em;
 }
-
-
 
 @include media-breakpoint-up(md) {
   //News Thumbnails
@@ -39,6 +35,9 @@ body {
 
   //Hover on dropdown
   header {
+    .dropdown-menu a:hover {
+      color: $primary !important;
+    }
     .dropdown:hover .dropdown-menu {
       display: block;
     }

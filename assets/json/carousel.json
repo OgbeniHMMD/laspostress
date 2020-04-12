@@ -1,0 +1,30 @@
+[
+  {
+    "id": "00",
+    "status": "active",
+    "img": "/slides/slide000.jpg",
+    "title": "Dummmy Title 000",
+    "slug": "dummy-carousel-slug",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    "id": "01",
+    "img": "/slides/slide001.jpg",
+    "title": "Dummmy Title 001",
+    "slug": "dummy-carousel-slug"
+  },
+  {
+    "id": "02",
+    "img": "/slides/slide002.jpg",
+    "title": "Dummmy Title 002",
+    "slug": "dummy-carousel-slug",
+    "description": "XDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    "id": "03",
+    "img": "/slides/slide003.jpg",
+    "title": "Dummmy Title 003",
+    "slug": "dummy-carousel-slug",
+    "description": "WDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  }
+]

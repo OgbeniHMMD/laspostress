@@ -38,7 +38,7 @@
         </button>
       </div>
 
-      <div id="search-navbar" class="ml-auto h6 m-0 p-2 col-12 col-lg-auto">
+      <div id="search-navbar" class="ml-auto h6 m-0 p-2 col-12 col-lg-4">
         <div class="input-group input-group-lg nav-item">
           <input
             type="search"
@@ -76,9 +76,13 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark m-0 p-0">
       <div id="navbar01" class="collapse navbar-collapse bg-secondary border-top">
-        <ul class="navbar-nav justify-content-around h5 m-0 p-1">
-          <li v-for="menu in menu001" :key="menu.id" class="nav-item mx-3">
-            <a v-if="!menu.children" :href="menu.slug" class="nav-link text-light h5">{{menu.title}}</a>
+        <ul class="navbar-nav justify-content-around w-100 h5 m-0 p-1">
+          <li v-for="menu in menuJSON" :key="menu.id" class="nav-item mx-3">
+            <a
+              v-if="!menu.children"
+              :href="menu.slug"
+              class="nav-link text-light h5 mb-0"
+            >{{menu.title}}</a>
 
             <div v-else class="nav-link dropdown">
               <a
@@ -87,19 +91,19 @@
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
-                class="nav-link dropdown-toggle text-light h5 p-0"
+                class="dropdown dropdown-toggle text-light h5"
               >{{menu.title}}</a>
 
               <div
+                :class="menu.class"
                 class="dropdown-menu bg-secondary border-light rounded-0 mt-0"
-                aria-labelledby="dropdown-quicklinks"
               >
                 <template v-for="child in menu.children">
                   <div v-if="child.divider" :key="child.id" class="dropdown-divider"></div>
                   <a
                     v-else
-                    :href="child.slug"
                     :key="child.id"
+                    :href="child.slug"
                     class="dropdown-item text-light py-2"
                   >{{child.title}}</a>
                 </template>
@@ -114,76 +118,12 @@
 
 
 <script>
-//import newsJSON from "news.json";
+import menuJSON from "~/assets/json/menu.json";
 
 export default {
   data: function() {
     return {
-      menu001: [
-        {
-          title: "Admissions",
-          slug: "dummy-carousel-slug",
-          children: [
-            { title: "National Diploma", slug: "dummy-children-slug" },
-            { title: "Higher National Diploma", slug: "dummy-children-slug" },
-            { divider: "-" },
-            {
-              title: "School Of Part-time Studies",
-              slug: "dummy-children-slug"
-            }
-          ]
-        },
-        {
-          title: "Portals",
-          slug: "dummy-carousel-slug",
-          children: [
-            { title: "Application portal", slug: "dummy-children-slug" },
-            { title: "Post UTME portal", slug: "dummy-children-slug" },
-            { divider: "-" },
-            { title: "Student Portal", slug: "dummy-children-slug" },
-            { divider: "-" },
-            { title: "Staff Portal", slug: "dummy-children-slug" },
-            { title: "Staff Appraisal", slug: "dummy-children-slug" },
-            { divider: "-" },
-            { title: "PT Lecturing Form", slug: "dummy-children-slug" },
-            { divider: "-" },
-            { title: "LaspoKonsult", slug: "dummy-children-slug" }
-          ]
-        },
-        { title: "Research", slug: "dummy-carousel-slug" },
-        {
-          id: "03",
-          title: "Documents",
-          slug: "dummy-carousel-slug",
-          children: [
-            { title: "Brochure", slug: "dummy-children-slug" },
-            { title: "Harmonized Curriculum", slug: "dummy-children-slug" },
-            {
-              title: "CCE Examinations Time-Table 18/19 Acad. Sess.",
-              slug: "dummy-children-slug"
-            },
-            {
-              title: "Procedure for Registration 2019/2020",
-              slug: "dummy-children-slug"
-            },
-            { divider: "-" },
-            { title: "FAQ", slug: "dummy-children-slug" }
-          ]
-        },
-        { title: "News & Event", slug: "dummy-carousel-slug" },
-        {
-          title: "About",
-          slug: "dummy-carousel-slug",
-          children: [
-            { title: "Mission & Vission", slug: "dummy-children-slug" },
-            { title: "Child Title 2", slug: "dummy-children-slug" },
-            { title: "Child Title 3", slug: "dummy-children-slug" },
-            { title: "Child Title 3", slug: "dummy-children-slug" },
-            { divider: "-" },
-            { title: "FAQ", slug: "dummy-children-slug" }
-          ]
-        }
-      ]
+      menuJSON: menuJSON
     };
   }
 };

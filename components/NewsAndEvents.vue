@@ -1,5 +1,5 @@
 <template>
-  <div class="row container-fluid m-0 bg-white py-3 border-top">
+  <div class="row container-fluid m-0 bg-light py-3 border-top">
     <section class="col-12 col-md-6 col-lg-8">
       <div>
         <span class="h1">News</span>

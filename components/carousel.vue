@@ -2,7 +2,7 @@
   <section id="carouselIndicators" class="carousel slide border-top clearfix" data-ride="carousel">
     <ol class="carousel-indicators d-none d-md-flex">
       <li
-        v-for="slide in slides"
+        v-for="slide in carouselJSON"
         :key="slide.id"
         data-target="#carouselIndicators"
         :data-slide-to="slide.id"
@@ -11,12 +11,18 @@
     </ol>
 
     <div class="carousel-inner">
-      <div v-for="slide in slides" :key="slide.id" :class="slide.status" class="carousel-item">
+      <div
+        v-for="slide in carouselJSON"
+        :key="slide.id"
+        :class="slide.status"
+        class="carousel-item"
+      >
         <img class="d-block w-100" :src="slide.img" :alt="slide.title" />
-        <div v-if="slide.title || slide.description" class="carousel-caption d-none d-md-block">
-          <h5>{{slide.title}}</h5>
-          <p>{{slide.description}}</p>
-        </div>
+        <div
+          v-if="slide.title || slide.description"
+          class="carousel-caption h2 d-none d-md-block"
+        >{{slide.title}}</div>
+        <div class="h5 bg-light text-dary text-center p-2 m-0 d-block d-md-none">{{slide.title}}</div>
       </div>
     </div>
 
@@ -31,46 +37,13 @@
 </template>
 
 
-
 <script>
-//import newsJSON from "news.json";
+import carouselJSON from "~/assets/json/carousel.json";
 
 export default {
   data: function() {
     return {
-      slides: [
-        {
-          id: "00",
-          status: "active", //NB: ONE Item MUST be active  **** require(`${slide.img}`)
-          img: "/slides/slide000.jpg",
-          title: "Dummmy Title 000",
-          slug: "dummy-carousel-slug",
-          description:
-            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        },
-        {
-          id: "01",
-          img: "/slides/slide001.jpg",
-          title: "Dummmy Title 001",
-          slug: "dummy-carousel-slug"
-        },
-        {
-          id: "02",
-          img: "/slides/slide002.jpg",
-          title: "Dummmy Title 002",
-          slug: "dummy-carousel-slug",
-          description:
-            "XDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        },
-        {
-          id: "03",
-          img: "/slides/slide003.jpg",
-          title: "Dummmy Title 003",
-          slug: "dummy-carousel-slug",
-          description:
-            "WDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        }
-      ]
+      carouselJSON
     };
   }
 };

@@ -1,0 +1,177 @@
+[
+  {
+    "title": "Home",
+    "slug": "/"
+  },
+  {
+    "title": "Admissions",
+    "slug": "/admmissions",
+    "children": [
+      {
+        "title": "National Diploma",
+        "slug": "/admmissions/ND"
+      },
+      {
+        "title": "Higher National Diploma",
+        "slug": "/admmissions/HND"
+      },
+      {
+        "divider": "-"
+      },
+      {
+        "title": "School Of Part-time Studies",
+        "slug": "/admmissions/spts"
+      }
+    ]
+  },
+  {
+    "title": "Portals",
+    "slug": "dummy-carousel-slug",
+    "children": [
+      {
+        "title": "Application portal",
+        "slug": "/portals/application"
+      },
+      {
+        "title": "Post UTME portal",
+        "slug": "/portals/post-utme"
+      },
+      {
+        "divider": "-"
+      },
+      {
+        "title": "Students Portal",
+        "slug": "/portals/student"
+      },
+      {
+        "divider": "-"
+      },
+      {
+        "title": "Staff Portal",
+        "slug": "/portals/staff"
+      },
+      {
+        "title": "Staff Appraisal",
+        "slug": "/portals/appraisal"
+      },
+      {
+        "divider": "-"
+      },
+      {
+        "title": "PT Lecturing Form",
+        "slug": "/portals/vacancies"
+      },
+      {
+        "divider": "-"
+      },
+      {
+        "title": "Graduates Portal",
+        "slug": "/portals/graduate"
+      }
+    ]
+  },
+  {
+    "title": "Academics",
+    "slug": "/academics",
+    "children": [
+      {
+        "title": "Schools",
+        "slug": "/academics/schools"
+      },
+      {
+        "title": "Departments",
+        "slug": "/academics/departments"
+      },
+      {
+        "title": "Calendar (2019/2020)",
+        "slug": "/academics/calendar"
+      },
+      {
+        "divider": "-"
+      },
+      {
+        "title": "Nd Curricula",
+        "slug": "https://net.nbte.gov.ng/nd%20curricula"
+      },
+      {
+        "title": "HND Curricula",
+        "slug": "https://net.nbte.gov.ng/hnd%20curricula"
+      },
+      {
+        "divider": "-"
+      },
+      {
+        "title": "Brochure",
+        "slug": "/academics/curriculum"
+      },
+      {
+        "title": "Handbook",
+        "slug": "/academics/handbook"
+      }
+    ]
+  },
+  {
+    "title": "News & Event",
+    "slug": "/news-events"
+  },
+  {
+    "title": "About",
+    "slug": "dummy-carousel-slug",
+    "class": "dropdown-menu-right",
+    "children": [
+      {
+        "title": "Mission & Vision",
+        "slug": "/aboutmission-vision"
+      },
+      {
+        "title": "Principal Officers",
+        "slug": "/about/principal-officals"
+      },
+      {
+        "title": "Governing Councils",
+        "slug": "/about/governing-councils"
+      },
+      {
+        "divider": "-"
+      },
+      {
+        "title": "Medical Center",
+        "slug": "/about/medical-center"
+      },
+      {
+        "title": "ICT Unit",
+        "slug": "/about/ict-unit"
+      },
+      {
+        "title": "Security Unit",
+        "slug": "/about/security-unit"
+      },
+      {
+        "title": "Arts & Gallery",
+        "slug": "/about/arts-gallery"
+      },
+      {
+        "divider": "-"
+      },
+      {
+        "title": "LaspoKonsult",
+        "slug": "http://laspotechkonsult.com/"
+      },
+      {
+        "title": "Laspo farms",
+        "slug": "/laspo-farms"
+      },
+      {
+        "divider": "-"
+      },
+      {
+        "title": "Downloads",
+        "slug": "/downloads"
+      },
+      {
+        "title": "Knowledge Base",
+        "slug": "/about/knowledge-base"
+      }
+    ]
+  }
+]
