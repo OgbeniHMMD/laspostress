@@ -1,5 +1,9 @@
 <template>
-  <section id="carouselIndicators" class="carousel slide border-top clearfix" data-ride="carousel">
+  <section
+    id="carouselIndicators"
+    class="carousel slide align-self-stretch border-top clearfix"
+    data-ride="carousel"
+  >
     <ol class="carousel-indicators d-none d-md-flex">
       <li
         v-for="slide in carouselJSON"
@@ -22,7 +26,7 @@
           v-if="slide.title || slide.description"
           class="carousel-caption h2 d-none d-md-block"
         >{{slide.title}}</div>
-        <div class="h5 bg-light text-dary text-center p-2 m-0 d-block d-md-none">{{slide.title}}</div>
+        <div class="bg-light text-center p-2 m-0 d-block d-md-none">{{slide.title}}</div>
       </div>
     </div>
 
