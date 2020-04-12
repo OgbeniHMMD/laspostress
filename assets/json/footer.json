@@ -1,0 +1,52 @@
+{
+  "quickLinks": [
+    {
+      "title": "Vision & Mission",
+      "slug": "/"
+    },
+    {
+      "title": "Photo Gallery",
+      "slug": "/photo-gallery"
+    },
+    {
+      "title": "Downloads",
+      "slug": "/downloads"
+    },
+    {
+      "title": "Knowledge Base (F.A.Q)",
+      "slug": "/faq"
+    }
+  ],
+  "aboutUs": [
+    {
+      "title": "Breif History",
+      "slug": "/history"
+    },
+    {
+      "title": "Principal Officers",
+      "slug": "/principal-officers"
+    },
+    {
+      "title": "Polytechnics Officials",
+      "slug": "/polytechnics-officials"
+    },
+    {
+      "title": "Governing Council",
+      "slug": "/governing-council"
+    }
+  ],
+  "contactUs": [
+    {
+      "title": "Km 5, Sagamu Road, P. O. Box 249, Ikorodu, Lagos State, Nigeria."
+    },
+    {
+      "title": "info@mylaspotech.edu.ng"
+    },
+    {
+      "title": "registrar@mylaspotech.edu.ng"
+    },
+    {
+      "title": "0803 836 0319, 0812 313 5537, 0802 832 9414"
+    }
+  ]
+}
