@@ -1,14 +1,14 @@
 <template>
   <section
-    id="carouselIndicators"
+    id="carousel-01"
     class="carousel slide align-self-stretch border-top clearfix"
     data-ride="carousel"
   >
-    <ol class="carousel-indicators d-none d-md-flex">
+    <ol class="carousel-indicators">
       <li
         v-for="slide in carouselJSON"
         :key="slide.id"
-        data-target="#carouselIndicators"
+        data-target="#carousel-01"
         :data-slide-to="slide.id"
         :class="slide.status"
       ></li>
@@ -26,15 +26,14 @@
           v-if="slide.title || slide.description"
           class="carousel-caption h2 d-none d-md-block"
         >{{slide.title}}</div>
-        <div class="bg-light text-center p-2 m-0 d-block d-md-none">{{slide.title}}</div>
       </div>
     </div>
 
-    <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#carousel-01" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#carousel-01" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
     </a>
   </section>
@@ -52,3 +51,4 @@ export default {
   }
 };
 </script>
+

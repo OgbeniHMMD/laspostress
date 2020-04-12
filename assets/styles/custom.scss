@@ -24,7 +24,7 @@ body {
 
 //Add shadows to the carousel text
 .carousel-caption {
-  text-shadow: black 0.2em 0.2em 0.5em;
+  text-shadow: black 2px 2px;
 }
 
 @include media-breakpoint-up(md) {

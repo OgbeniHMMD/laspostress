@@ -1,27 +1,38 @@
 [
   {
-    "id": "00",
     "status": "active",
-    "img": "/slides/slide000.jpg",
+    "img": "/slides/shogunro-sanwoolu.jpg",
     "title": "Governor Babajide O. Sanwolu And The Rector During The 2020 Convocation Ceremony",
     "slug": "#"
   },
   {
-    "id": "01",
-    "img": "/slides/slide001.jpg",
-    "title": "Photos from the Library Complex",
+    "img": "/slides/sanwoolu-speaking.jpg",
+    "title": "",
     "slug": "#"
   },
   {
-    "id": "02",
-    "img": "/slides/slide002.jpg",
-    "title": "A View Of the Enviromental Department",
-    "slug": "#"
-  },
-  {
-    "id": "03",
-    "img": "/slides/slide003.jpg",
+    "img": "/slides/best-grad-2020.jpg",
     "title": "Best Gaduating Student (2020) And The Governor",
+    "slug": "#"
+  },
+  {
+    "img": "/slides/sanwoolu-convocation.jpg",
+    "title": "",
+    "slug": "#"
+  },
+  {
+    "img": "/slides/ogbeni-rauf.jpg",
+    "title": "",
+    "slug": "#"
+  },
+  {
+    "img": "/slides/library-admin-complex.jpg",
+    "title": "Photos from the Library/ Admin Complex",
+    "slug": "#"
+  },
+  {
+    "img": "/slides/arts-design-dept.jpg",
+    "title": "A View Of The Arts & Design Department",
     "slug": "#"
   }
 ]
