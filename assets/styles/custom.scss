@@ -22,14 +22,6 @@ body {
   clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
 }
 
-.dropdown-toggle::after {
-  display: none;
-}
-//Add shadows to the carousel text
-.carousel-caption {
-  text-shadow: black 2px 2px;
-}
-
 @include media-breakpoint-up(md) {
   //News Thumbnails
   .thumb {

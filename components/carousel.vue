@@ -23,8 +23,9 @@
       >
         <img class="d-block w-100" :src="slide.img" :alt="slide.title" />
         <div
-          v-if="slide.title || slide.description"
+          v-if="slide.title"
           class="carousel-caption h2 d-none d-md-block"
+          style="text-shadow: black 2px 2px;"
         >{{slide.title}}</div>
       </div>
     </div>

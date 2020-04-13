@@ -1,9 +1,18 @@
 <template>
-  <div class="container-fluid bg-light px-3 py-5 lead border-top">
-    <div class="h2">Featured</div>
+  <div class="container-fluid bg-white border-top px-3 py-3 py-md-5">
     <div class="card-deck">
       <article class="card">
-        <img src="~~/assets/images/dummy-thumb.jpg" class="card-img-top" />
+        <img src="~~/assets/images/logo-inner.png" class="mx-auto" />
+        <div class="card-body lead">
+          <a href="#">
+            <div class="card-text">Dummy dummy dummy dummy...</div>
+          </a>
+          <div class="text-muted text-small">Date and Time</div>
+        </div>
+      </article>
+
+      <article class="card lead">
+        <img src="~~/assets/images/logo-inner.png" class="mx-auto" />
         <div class="card-body">
           <a href="#">
             <div class="card-text">Dummy dummy dummy dummy...</div>
@@ -11,17 +20,9 @@
           <div class="text-muted text-small">Date and Time</div>
         </div>
       </article>
-      <article class="card">
-        <img src="~~/assets/images/dummy-thumb.jpg" class="card-img-top" />
-        <div class="card-body">
-          <a href="#">
-            <div class="card-text">Dummy dummy dummy dummy...</div>
-          </a>
-          <div class="text-muted text-small">Date and Time</div>
-        </div>
-      </article>
-      <article class="card">
-        <img src="~~/assets/images/dummy-thumb.jpg" class="card-img-top" />
+
+      <article class="card lead">
+        <img src="~~/assets/images/logo-inner.png" class="mx-auto" />
         <div class="card-body">
           <a href="#">
             <div class="card-text">Dummy dummy dummy dummy...</div>

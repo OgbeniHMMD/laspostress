@@ -1,0 +1,54 @@
+{
+  "news": [
+    {
+      "slug": "dummy-slug",
+      "title": "COVID-19: LASPOTECH'S Lastest Reseach Updates",
+      "time": "Yesterday",
+      "description": " Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    {
+      "slug": "dummy-slug",
+      "title": "Laspotech Welcomed Ogbeni Abdul-Rauf A. Aregbesola To Its 27th Convocation Lecture",
+      "time": "Today",
+      "description": "Offendit eleifend moderatius ex vix, quem odio mazim et qui, purto expetendis cotidieque quo cu, veri persius vituperata ei nec."
+    },
+    {
+      "slug": "dummy-slug",
+      "title": "Governor Babajide Olusola Sanw-Olu’s Speech at the 27th Convocation Ceremony",
+      "time": "3 minutes ago",
+      "description": "Qui gloriatur scribentur et, id velit verear mel, cum no porro debet. Et mazim recteque nam. Nobis perfecto id vix, dicat vocent id nam."
+    }
+  ],
+
+  "events": [
+    {
+      "slug": "dummy-event-slug",
+      "title": "Laspotech 27th Convocation Ceremony",
+      "time": ["21", "APR"],
+      "comment": "2020 Graduating Set"
+    },
+    {
+      "slug": "dummy-event-slug",
+      "title": "Mouth touched with hot gold as a gliding cursor struck sparks",
+      "time": ["1", "JAN"],
+      "comment": "Dummy Event description..."
+    },
+    {
+      "slug": "dummy-event-slug",
+      "title": "From the wall between the bookcases, its distorted face sagging to the bare concrete floor",
+      "time": ["DEC", "19"],
+      "comment": ""
+    },
+    {
+      "slug": "dummy-event-slug",
+      "title": "The semiotics of the previous century. They floated in the human system",
+      "time": ["DEC", "7"],
+      "comment": "Annual"
+    },
+    {
+      "slug": "dummy-event-slug",
+      "title": "The alarm still oscillated, louder here, the rear wall dulling the roar of the spherical chamber",
+      "time": ["DEC", "31"]
+    }
+  ]
+}
