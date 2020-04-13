@@ -4,13 +4,7 @@
       <div class="slant p-1 pl-sm-3 pr-5 bg-light align-self-start p-auto">
         <div class="d-flex align-items-center">
           <a href="/">
-            <img
-              width="90"
-              height="90"
-              src="~~/assets/images/logo-alpha.png"
-              class="logo d-inline-block align-top"
-              alt
-            />
+            <img width="90" height="90" src="/logo.png" class="logo d-inline-block align-top" alt />
           </a>
         </div>
       </div>
