@@ -1,9 +1,5 @@
 [
   {
-    "title": "Home",
-    "slug": "/"
-  },
-  {
     "title": "Admissions",
     "slug": "/admmissions",
     "children": [
