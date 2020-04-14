@@ -14,7 +14,28 @@ export default {
         content: process.env.npm_package_description || ""
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        defer: true,
+        rel: "stylesheet",
+        href:
+          "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      },
+      {
+        defer: true,
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      }
+    ],
+    script: [
+      { src: "https://code.jquery.com/jquery-3.4.1.slim.min.js", defer: true },
+      {
+        src:
+          "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js",
+        defer: true
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
