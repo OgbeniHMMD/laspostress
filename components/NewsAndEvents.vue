@@ -57,7 +57,7 @@ import newsEventJSON from "~/assets/json/news-events.json";
 export default {
   data: function() {
     return {
-      newsEventJSON
+      newsEventJSON: newsEventJSON
     };
   }
 };
