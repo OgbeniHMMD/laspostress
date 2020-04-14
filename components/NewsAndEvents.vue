@@ -9,11 +9,11 @@
       </div>
 
       <div v-for="news in newsBlogger.items" :key="news.id" class="d-flex flex-wrap">
-        <article class="media position-relative my-2">
+        <article v-if="news.title.split('~')[0]=='news'" class="media position-relative my-2">
           <img src="~~/assets/images/logo-inner.png" class="mr-3 thumb" alt="..." />
           <div class="media-body d-flex flex-column align-items-start">
             <a :href="'/news/'+news.id" class="stretched-link">
-              <h3 class="m-0">{{news.title}}</h3>
+              <h3 class="m-0">{{news.title.split('~')[1]}}</h3>
             </a>
             <p class="lead d-none d-lg-block">{{news.content}}</p>
             <div class="text-muted mt-auto">
@@ -40,14 +40,18 @@
         :key="event.id"
         class="d-flex flex-column justify-content-between"
       >
-        <article if-v="event.labels.find('Events')" class="d-flex position-relative p-0 m-1 py-2">
+        <article
+          v-if="event.title.split('~')[0]=='event'"
+          class="d-flex position-relative p-0 m-1 py-2"
+        >
           <div class="event-thumb h4 bg-primary text-center text-white m-0 p-2 mr-2">
-            21
-            <br />4
+            {{event.title.split('~')[1].split(' ')[0]}}
+            <br />
+            {{event.title.split('~')[1].split(' ')[1]}}
           </div>
           <div class="d-flex flex-column align-items-start">
             <a :href="'/events'+event.id" class="stretched-link">
-              <h5 class="m-0">{{event.title}}</h5>
+              <h5 class="m-0">{{event.title.split('~')[2]}}</h5>
             </a>
             <div v-if="event.published" class="pt-2 text-muted text-small mt-auto">
               <i class="fa fa-calendar mr-2"></i>
