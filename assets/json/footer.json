@@ -2,7 +2,7 @@
   "quickLinks": [
     {
       "title": "Vision & Mission",
-      "slug": "/"
+      "slug": "/vision-mission"
     },
     {
       "title": "Photo Gallery",
@@ -37,42 +37,38 @@
   ],
   "contactUs": [
     {
+      "icon": "fa-home",
       "title": "Km 5, Sagamu Road, P. O. Box 249, Ikorodu, Lagos State, Nigeria."
     },
     {
+      "icon": "fa-envelope-o",
       "title": "info@mylaspotech.edu.ng"
     },
     {
+      "icon": "fa-envelope-o",
       "title": "registrar@mylaspotech.edu.ng"
     },
     {
+      "icon": "fa-phone",
       "title": "0803 836 0319, 0812 313 5537, 0802 832 9414"
     }
   ],
   "socialLinks": [
     {
-      "slug": "",
-      "svg": " "
+      "url": "https://web.facebook.com/laspotechikorodu",
+      "icon": "fa-facebook-square"
     },
     {
-      "slug": "",
-      "svg": ""
+      "url": "https://twitter.com/RLaspotech",
+      "icon": "fa-twitter-square"
     },
     {
-      "slug": "",
-      "svg": ""
+      "url": "https://www.youtube.com/channel/UCMPqWkFYQI_d6hy1wTXpyWQ",
+      "icon": "fa-youtube"
     },
     {
-      "slug": "",
-      "svg": ""
-    },
-    {
-      "slug": "",
-      "svg": ""
-    },
-    {
-      "slug": "",
-      "svg": ""
+      "url": "https://github.como/OgbeniHMMD/laspostress",
+      "icon": "fa-github"
     }
   ]
 }

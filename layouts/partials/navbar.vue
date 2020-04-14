@@ -43,18 +43,7 @@
           />
           <div class="input-group-append">
             <button class="btn bg-light" type="button" id="button-addon1">
-              <svg width="1em" height="1em" viewBox="0 0 16 16" fill="CurrentColor">
-                <path
-                  fill-rule="evenodd"
-                  d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
-                  clip-rule="evenodd"
-                />
-                <path
-                  fill-rule="evenodd"
-                  d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+              <i class="fa fa-search"></i>
             </button>
           </div>
         </div>
@@ -65,11 +54,10 @@
       <div id="navbar01" class="collapse navbar-collapse bg-secondary border-top">
         <ul class="navbar-nav justify-content-around w-100 h5 m-0 p-1">
           <li v-for="menu in menuJSON" :key="menu.id" class="nav-item mx-3">
-            <a
-              v-if="!menu.children"
-              :href="menu.slug"
-              class="nav-link text-light h5 mb-0"
-            >{{menu.title}}</a>
+            <a v-if="!menu.children" :href="menu.slug" class="nav-link text-light h5 mb-0">
+              <i :class="menu.icon" class="fa mr-2"></i>
+              {{menu.title}}
+            </a>
 
             <div v-else class="nav-link dropdown">
               <a
@@ -78,8 +66,12 @@
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
-                class="dropdown dropdown-toggle text-light h5 d-flex align-items-center justify-content-between"
-              >{{menu.title}}</a>
+                class="dropdown text-light h5 d-flex align-items-center"
+              >
+                <i :class="menu.icon" class="fa mr-2"></i>
+                <span class="flex-grow-1">{{menu.title}}</span>
+                <i class="fa fa-angle-down ml-2 d-lg-none"></i>
+              </a>
 
               <div
                 :class="menu.class"

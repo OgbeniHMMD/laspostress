@@ -1,50 +1,52 @@
 [
   {
     "title": "Admissions",
+    "icon": "fa-university",
     "slug": "/admmissions",
     "children": [
       {
         "title": "National Diploma",
-        "slug": "/admmissions/ND"
+        "slug": "https://applications.laspotech.app/Start.aspx?ApplicationType=ND-FT"
       },
       {
         "title": "Higher National Diploma",
-        "slug": "/admmissions/HND"
+        "slug": "https://applications.laspotech.app/Start.aspx?ApplicationType=HND-FT"
       },
       {
         "divider": "-"
       },
       {
         "title": "School Of Part-time Studies",
-        "slug": "/admmissions/spts"
+        "slug": "https://applications.laspotech.app/"
       }
     ]
   },
   {
     "title": "Portals",
+    "icon": "fa-link",
     "slug": "dummy-carousel-slug",
     "children": [
       {
         "title": "Application portal",
-        "slug": "/portals/application"
+        "slug": "https://applications.laspotech.app/"
       },
       {
         "title": "Post UTME portal",
-        "slug": "/portals/post-utme"
+        "slug": "https://applications.laspotech.app/Start.aspx?ApplicationType=ND-FT"
       },
       {
         "divider": "-"
       },
       {
         "title": "Students Portal",
-        "slug": "/portals/student"
+        "slug": "https://studentportal.laspotech.app/"
       },
       {
         "divider": "-"
       },
       {
-        "title": "Staff Portal",
-        "slug": "/portals/staff"
+        "title": "Staff Email",
+        "slug": "https://mail.ionos.com/"
       },
       {
         "title": "Staff Appraisal",
@@ -54,20 +56,21 @@
         "divider": "-"
       },
       {
-        "title": "PT Lecturing Form",
-        "slug": "/portals/vacancies"
+        "title": "Sundry Payments",
+        "slug": "https://sundrypayments.laspotech.app/"
       },
       {
         "divider": "-"
       },
       {
-        "title": "Graduates Portal",
-        "slug": "/portals/graduate"
+        "title": "Vacancies",
+        "slug": "jobs"
       }
     ]
   },
   {
     "title": "Academics",
+    "icon": "fa-graduation-cap",
     "slug": "/academics",
     "children": [
       {
@@ -108,16 +111,35 @@
   },
   {
     "title": "News & Event",
-    "slug": "/news-events"
+    "icon": "fa-newspaper-o",
+    "slug": "/news-events",
+    "children": [
+      {
+        "title": "Latest News",
+        "slug": "/news"
+      },
+      {
+        "title": "Past & Upcoming Events",
+        "slug": "/events"
+      },
+      {
+        "divider": "-"
+      },
+      {
+        "title": "Photo Gallery",
+        "slug": "/gallery"
+      }
+    ]
   },
   {
     "title": "About",
+    "icon": "fa-question-circle-o",
     "slug": "dummy-carousel-slug",
     "class": "dropdown-menu-right",
     "children": [
       {
         "title": "Mission & Vision",
-        "slug": "/aboutmission-vision"
+        "slug": "/about/mission-vision"
       },
       {
         "title": "Principal Officers",
@@ -143,8 +165,8 @@
         "slug": "/about/security-unit"
       },
       {
-        "title": "Arts & Gallery",
-        "slug": "/about/arts-gallery"
+        "title": "Phot0 Gallery",
+        "slug": "/gallery"
       },
       {
         "divider": "-"
@@ -152,10 +174,6 @@
       {
         "title": "LaspoKonsult",
         "slug": "http://laspotechkonsult.com/"
-      },
-      {
-        "title": "Laspo farms",
-        "slug": "/laspo-farms"
       },
       {
         "divider": "-"
@@ -166,7 +184,7 @@
       },
       {
         "title": "Knowledge Base",
-        "slug": "/about/knowledge-base"
+        "slug": "/knowledge-base"
       }
     ]
   }
