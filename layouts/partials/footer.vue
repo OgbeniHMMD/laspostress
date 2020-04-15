@@ -31,7 +31,7 @@
     </div>
 
     <div class="bg-primary border-top text-monospace">
-      <div class="container-fluid row align-items-center p-3 p-md-3">
+      <div class="container-fluid row align-items-center p-3 p-md-3 m-0">
         <div
           class="col-100 col-md-6 text-center text-md-left"
         >Copyright © 2020 Lagos State Polytechnic. All rights reserved.</div>

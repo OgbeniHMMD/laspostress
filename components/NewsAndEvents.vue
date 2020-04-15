@@ -27,7 +27,7 @@
     </section>
 
     <section class="col-12 col-md-5 col-lg-4">
-      <div class="mt-5 mt-md-0">
+      <div class="mt-3 mt-md-5">
         <span class="h1">Events</span>
         <a href="/events" class="border-left ml-3 pl-3">
           <i class="fa fa-calendar mr-2"></i> All Events
