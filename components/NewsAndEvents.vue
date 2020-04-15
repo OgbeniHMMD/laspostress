@@ -1,6 +1,6 @@
 <template>
   <div class="row m-0 bg-white border-top py-3">
-    <section class="col-12 col-md-6 col-lg-8">
+    <section class="col-12 col-md-7 col-lg-8">
       <div>
         <span class="h1">News</span>
         <a href="/news" class="border-left ml-3 pl-3">
@@ -26,7 +26,7 @@
       </div>
     </section>
 
-    <section class="col-12 col-md-6 col-lg-4">
+    <section class="col-12 col-md-5 col-lg-4">
       <div class="mt-5 mt-md-0">
         <span class="h1">Events</span>
         <a href="/events" class="border-left ml-3 pl-3">
