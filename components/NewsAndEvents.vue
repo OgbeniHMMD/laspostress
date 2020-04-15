@@ -7,19 +7,18 @@
           <i class="fa fa-newspaper-o mr-2"></i> All News
         </a>
       </div>
-
-      <div v-for="news in newsBlogger.items" :key="news.id" class="d-flex flex-wrap">
-        <article v-if="news.title.split('~')[0]=='news'" class="media position-relative my-2">
+      <div v-for="article in news.items" :key="article.id" class="d-flex flex-wrap">
+        <article class="media position-relative my-2">
           <img src="~~/assets/images/logo-inner.png" class="mr-3 thumb" alt="..." />
           <div class="media-body d-flex flex-column align-items-start">
-            <a :href="'/news/'+news.id" class="stretched-link">
-              <h3 class="m-0">{{news.title.split('~')[1]}}</h3>
+            <a :href="'/news/'+article.id" class="stretched-link">
+              <h3 class="m-0">{{article.title}}</h3>
             </a>
-            <p class="lead d-none d-lg-block">{{news.content}}</p>
+            <p class="lead d-none d-lg-inline">{{article.content}}</p>
             <div class="text-muted mt-auto">
               <span>
                 <i class="fa fa-clock-o mr-2"></i>
-                {{new Date(news.published).toDateString()}}
+                {{new Date(article.published).toDateString()}}
               </span>
             </div>
           </div>
@@ -36,22 +35,19 @@
       </div>
 
       <div
-        v-for="event in newsBlogger.items"
+        v-for="event in events.items"
         :key="event.id"
         class="d-flex flex-column justify-content-between"
       >
-        <article
-          v-if="event.title.split('~')[0]=='event'"
-          class="d-flex position-relative p-0 m-1 py-2"
-        >
+        <article class="d-flex position-relative p-0 m-1 py-2">
           <div class="event-thumb h4 bg-primary text-center text-white m-0 p-2 mr-2">
-            {{event.title.split('~')[1].split(' ')[0]}}
+            {{new Date(event.published).toDateString().split(' ')[1]}}
             <br />
-            {{event.title.split('~')[1].split(' ')[1]}}
+            {{new Date(event.published).toDateString().split(' ')[2]}}
           </div>
           <div class="d-flex flex-column align-items-start">
             <a :href="'/events'+event.id" class="stretched-link">
-              <h5 class="m-0">{{event.title.split('~')[2]}}</h5>
+              <h5 class="m-0">{{event.title}}</h5>
             </a>
             <div v-if="event.published" class="pt-2 text-muted text-small mt-auto">
               <i class="fa fa-calendar mr-2"></i>
@@ -68,26 +64,69 @@
 
 <script>
 import axios from "axios";
+import bloggerJSON from "~/assets/json/blogger.json";
 
 export default {
   data: function() {
     return {
-      newsBlogger: ""
+      news: "",
+      events: "",
+      bloggerJSON
     };
   },
+  methods: {
+    async fetchNews() {
+      axios
+        .get(
+          "https://www.googleapis.com/blogger/v3/blogs/" +
+            this.bloggerJSON.id +
+            "/posts" +
+            "?key=" +
+            this.bloggerJSON.key +
+            "&labels=" +
+            this.bloggerJSON.newsLabels +
+            "," +
+            this.bloggerJSON.featuredLabel +
+            "&maxResult=" +
+            this.bloggerJSON.maxNews
+        )
+        .then(response => {
+          // JSON responses are automatically parsed.
+          this.news = response.data;
+        })
+        .catch(e => {
+          this.errors.push(e);
+        });
+    },
+    async fetchEvents() {
+      axios
+        .get(
+          "https://www.googleapis.com/blogger/v3/blogs/" +
+            this.bloggerJSON.id +
+            "/posts" +
+            "?key=" +
+            this.bloggerJSON.key +
+            "&labels=" +
+            this.bloggerJSON.eventsLabels +
+            "," +
+            this.bloggerJSON.featuredLabel +
+            "&maxResult=" +
+            this.bloggerJSON.maxEvents
+        )
+        .then(response => {
+          // JSON responses are automatically parsed.
+          this.events = response.data;
+        })
+        .catch(e => {
+          this.errors.push(e);
+        });
+    }
+  },
   // Fetches posts when the component is created.
+  //REF: https://alligator.io/vuejs/rest-api-axios/
   created() {
-    axios //REF: https://alligator.io/vuejs/rest-api-axios/
-      .get(
-        "https://www.googleapis.com/blogger/v3/blogs/4656669091149423564/posts?key=AIzaSyD43jXF8hy8PtQ-B6Jr0VZ9cWnaWoWVGgI"
-      )
-      .then(response => {
-        // JSON responses are automatically parsed.
-        this.newsBlogger = response.data;
-      })
-      .catch(e => {
-        this.errors.push(e);
-      });
+    this.fetchNews();
+    this.fetchEvents();
   }
 };
 </script>
