@@ -1,6 +1,12 @@
 body {
-  font-size: 14px;
+  font-size: 15px;
   font-family: "Roboto Condensed", $font-family-sans-serif;
+}
+
+//The slant around the Logo
+.slant {
+  -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
 }
 
 .event-thumb {
@@ -13,12 +19,6 @@ body {
 //News Thumbnails
 .thumb {
   max-height: 75px;
-}
-
-//The slant around the Logo
-.slant {
-  -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
-  clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
 }
 
 @include media-breakpoint-up(md) {
@@ -35,7 +35,7 @@ body {
     .dropdown:hover .dropdown-menu {
       display: block;
     }
-    .dropdown > .dropdown-toggle:active {
+    .avoid-sticky:active {
       pointer-events: none; /*Without this, clicking will make it sticky*/
     }
   }

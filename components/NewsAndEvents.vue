@@ -8,28 +8,35 @@
         </a>
       </header>
 
+      <section v-if="loading" class="text-center">
+        <i class="fa fa-spinner h1 text-primary m-5"></i>
+      </section>
+
       <div v-for="article in news.items" :key="article.id">
-        <article class="media position-relative my-2">
+        <article class="d-flex position-relative my-3">
           <img src="~~/assets/images/logo-inner.png" class="mr-3 thumb" alt="..." />
-          <div class="media-body d-flex flex-column align-items-start">
+          <div class="d-flex align-items-start flex-column">
             <a :href="'/view?id='+article.id" class="stretched-link">
-              <h3 class="m-0">{{article.title}}</h3>
+              <h3 class="mt-0 mb-2">{{article.title}}</h3>
             </a>
-            <p
-              class="lead d-none d-lg-inline"
-            >{{article.content.replace(/<[^>]+>/g, '').substring(0,120)}}</p>
+            <p class="lead d-none d-lg-inline">
+              {{
+              article.content
+              .replace(/<[^>]+>/g, '')
+              .substring(0, parseInt(bloggerJSON.snippetLenght))
+              }}
+            </p>
             <div class="text-muted mt-auto">
+              <i class="fa fa-clock-o mr-2"></i>
               <span>
-                <i class="fa fa-clock-o mr-2"></i>
-                {{new Date(article.published).toDateString()}}
+                {{
+                new Date(article.published)
+                .toDateString()
+                }}
               </span>
             </div>
           </div>
         </article>
-      </div>
-
-      <div v-if="loading" classs="text-center text-monospaced lead">
-        <i class="fa fa-spinner mr-3"></i>Loading, Please wait
       </div>
     </section>
 
@@ -41,12 +48,22 @@
         </a>
       </header>
 
-      <div v-for="event in events.items" :key="event.id">
+      <section v-if="loading" class="text-center">
+        <i class="fa fa-spinner h1 text-primary m-5"></i>
+      </section>
+
+      <section v-for="event in events.items" :key="event.id">
         <article class="d-flex position-relative p-0 m-1 py-2">
           <div class="event-thumb h4 bg-primary text-center text-white m-0 p-2 mr-2">
-            {{new Date(event.published).toDateString().split(' ')[1]}}
+            {{
+            new Date(event.published)
+            .toDateString().split(' ')[1]
+            }}
             <br />
-            {{new Date(event.published).toDateString().split(' ')[2]}}
+            {{
+            new Date(event.published)
+            .toDateString().split(' ')[2]
+            }}
           </div>
           <div class="d-flex flex-column align-items-start">
             <a :href="'/view?id='+event.id" class="stretched-link">
@@ -54,15 +71,14 @@
             </a>
             <div v-if="event.published" class="pt-2 text-muted text-small mt-auto">
               <i class="fa fa-calendar mr-2"></i>
-              {{new Date(event.published).toDateString()}}
+              {{
+              new Date(event.published)
+              .toDateString()
+              }}
             </div>
           </div>
         </article>
-      </div>
-
-      <div v-if="loading" classs="text-center text-monospaced h3">
-        <i class="fa fa-spinner mr-3"></i>Loading, Please wait
-      </div>
+      </section>
     </section>
   </div>
 </template>
@@ -107,7 +123,9 @@ export default {
         });
     },
     async fetchEvents() {
+      //
       //REF: https://alligator.io/vuejs/rest-api-axios/
+      //
       axios
         .get(
           "https://www.googleapis.com/blogger/v3/blogs/" +

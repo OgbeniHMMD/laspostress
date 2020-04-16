@@ -1,21 +1,30 @@
 <template>
   <div>
     <div class="d-flex flex-wrap justify-content-center align-items-center p-3 p-md-5">
-      <div class="text-primary">
-        <template v-if="error.statusCode === 404">
-          <h1>404. Page Not Found</h1>
-          <h3>Maybe I'm still working on this page.</h3>
-          <h3>Maybe you clicked a broken links</h3>
-        </template>
-        <h1 v-else>An error occurred</h1>
+      <div class="d-flex align-items-start flex-column order-2 order-1 mr-md-3 mr-lg-5">
+        <h3 class="text-primary">{{error.statusCode}}. {{error.message}}</h3>
+        <p v-if="error.statusCode === 404" class="text-primary mt-3 mt-md-5">
+          The requested URL "{{error.path}}"
+          was not found on this server.
+        </p>
       </div>
-      <img class="img-fluid" src="http://www.google.com/images/errors/robot.png" />
+      <img class="order-1 order-md-2 img-fluid" src="http://www.google.com/images/errors/robot.png" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["error"]
+  props: {
+    error: {
+      type: Object,
+      default: null
+    }
+  },
+  head() {
+    return {
+      title: this.message + " - Lagos State Polytechnic"
+    };
+  }
 };
 </script>

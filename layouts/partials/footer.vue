@@ -21,9 +21,9 @@
 
           <div class="col-100 col-md-4 p-3 p-md-5">
             <div class="h3 pb-2">Contact Us</div>
-            <p v-for="link in footerJSON.contactUs" :key="link.id">
-              <i class="fa mr-2" :class="link.icon"></i>
-              {{link.title}}
+            <p v-for="contact in footerJSON.contactUs" :key="contact.id">
+              <i class="fa mr-2" :class="contact.icon"></i>
+              <span>{{contact.title}}</span>
             </p>
           </div>
         </div>

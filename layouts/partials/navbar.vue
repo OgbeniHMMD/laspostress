@@ -66,7 +66,7 @@
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
-                class="dropdown text-light h5 d-flex align-items-center"
+                class="dropdown avoid-sticky text-light h5 d-flex align-items-center"
               >
                 <i :class="menu.icon" class="fa mr-2"></i>
                 <span class="flex-grow-1">{{menu.title}}</span>
