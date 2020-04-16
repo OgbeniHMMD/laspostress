@@ -1,6 +1,6 @@
 <template>
   <footer class="text-light">
-    <div class="bg-secondary border-top border-dark">
+    <div class="bg-secondary border-top border-light">
       <div class="container-fluid">
         <div class="row">
           <div class="col-100 col-sm-6 col-md-4 p-3 p-md-5">

@@ -1,19 +1,20 @@
 <template>
-  <div class="row m-0 bg-white border-top py-3">
+  <div class="row align-items-start m-0 bg-white border-top py-3 p-md-3">
     <section class="col-12 col-md-7 col-lg-8">
-      <div>
+      <header>
         <span class="h1">News</span>
         <a href="/news" class="border-left ml-3 pl-3">
           <i class="fa fa-newspaper-o mr-2"></i> All News
         </a>
-      </div>
-      <div v-for="article in news.items" :key="article.id" class="d-flex flex-wrap">
+      </header>
+
+      <div v-for="article in news.items" :key="article.id">
         <article class="media position-relative my-2">
           <img src="~~/assets/images/logo-inner.png" class="mr-3 thumb" alt="..." />
           <div class="media-body d-flex flex-column align-items-start">
-            <a :href="'/news/'+article.id" class="stretched-link">
+            <nuxt-link :to="{ path: 'view', query: { id: article.id }}" class="stretched-link">
               <h3 class="m-0">{{article.title}}</h3>
-            </a>
+            </nuxt-link>
             <p class="lead d-none d-lg-inline">{{article.content}}</p>
             <div class="text-muted mt-auto">
               <span>
@@ -24,21 +25,21 @@
           </div>
         </article>
       </div>
+
+      <div v-if="loading" classs="text-center text-monospaced lead">
+        <i class="fa fa-spinner mr-3"></i>Loading, Please wait
+      </div>
     </section>
 
     <section class="col-12 col-md-5 col-lg-4">
-      <div class="mt-3 mt-md-5">
+      <header class="mt-3 mt-md-0">
         <span class="h1">Events</span>
-        <a href="/events" class="border-left ml-3 pl-3">
+        <nuxt-link to="/events" class="border-left ml-3 pl-3">
           <i class="fa fa-calendar mr-2"></i> All Events
-        </a>
-      </div>
+        </nuxt-link>
+      </header>
 
-      <div
-        v-for="event in events.items"
-        :key="event.id"
-        class="d-flex flex-column justify-content-between"
-      >
+      <div v-for="event in events.items" :key="event.id">
         <article class="d-flex position-relative p-0 m-1 py-2">
           <div class="event-thumb h4 bg-primary text-center text-white m-0 p-2 mr-2">
             {{new Date(event.published).toDateString().split(' ')[1]}}
@@ -46,15 +47,19 @@
             {{new Date(event.published).toDateString().split(' ')[2]}}
           </div>
           <div class="d-flex flex-column align-items-start">
-            <a :href="'/events'+event.id" class="stretched-link">
+            <nux-link to="'/view?id='+event.id" class="stretched-link">
               <h5 class="m-0">{{event.title}}</h5>
-            </a>
+            </nux-link>
             <div v-if="event.published" class="pt-2 text-muted text-small mt-auto">
               <i class="fa fa-calendar mr-2"></i>
               {{new Date(event.published).toDateString()}}
             </div>
           </div>
         </article>
+      </div>
+
+      <div v-if="loading" classs="text-center text-monospaced h3">
+        <i class="fa fa-spinner mr-3"></i>Loading, Please wait
       </div>
     </section>
   </div>
@@ -69,6 +74,7 @@ import bloggerJSON from "~/assets/json/blogger.json";
 export default {
   data: function() {
     return {
+      loading: true,
       news: "",
       events: "",
       bloggerJSON
@@ -99,6 +105,7 @@ export default {
         });
     },
     async fetchEvents() {
+      //REF: https://alligator.io/vuejs/rest-api-axios/
       axios
         .get(
           "https://www.googleapis.com/blogger/v3/blogs/" +
@@ -116,14 +123,13 @@ export default {
         .then(response => {
           // JSON responses are automatically parsed.
           this.events = response.data;
+          this.loading = false;
         })
         .catch(e => {
           this.errors.push(e);
         });
     }
   },
-  // Fetches posts when the component is created.
-  //REF: https://alligator.io/vuejs/rest-api-axios/
   created() {
     this.fetchNews();
     this.fetchEvents();

@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || "The Lagos State Polytechnic",
+    title: "Lagos State Polytechnic" || process.env.npm_package_name,
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -65,5 +65,8 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  geneerate: {
+    fallback: true // if you want to use '404.html' instead of the default '200.html'
   }
 };
