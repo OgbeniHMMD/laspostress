@@ -12,7 +12,9 @@
           <a :href="'/view?id'+article.id" class="stretched-link">
             <h3 class="m-0">{{article.title}}</h3>
           </a>
-          <p class="lead d-none d-lg-inline">{{article.content}}</p>
+          <p
+            class="lead d-none d-lg-inline"
+          >{{article.content.replace(/<[^>]+>/g, '').substring(0,120)}}</p>
           <div class="text-muted mt-auto">
             <span>
               <i class="fa fa-clock-o mr-2"></i>

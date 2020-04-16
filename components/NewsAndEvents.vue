@@ -12,10 +12,12 @@
         <article class="media position-relative my-2">
           <img src="~~/assets/images/logo-inner.png" class="mr-3 thumb" alt="..." />
           <div class="media-body d-flex flex-column align-items-start">
-            <nuxt-link :to="{ path: 'view', query: { id: article.id }}" class="stretched-link">
+            <a :href="'/view?id='+article.id" class="stretched-link">
               <h3 class="m-0">{{article.title}}</h3>
-            </nuxt-link>
-            <p class="lead d-none d-lg-inline">{{article.content}}</p>
+            </a>
+            <p
+              class="lead d-none d-lg-inline"
+            >{{article.content.replace(/<[^>]+>/g, '').substring(0,120)}}</p>
             <div class="text-muted mt-auto">
               <span>
                 <i class="fa fa-clock-o mr-2"></i>
@@ -47,9 +49,9 @@
             {{new Date(event.published).toDateString().split(' ')[2]}}
           </div>
           <div class="d-flex flex-column align-items-start">
-            <nux-link to="'/view?id='+event.id" class="stretched-link">
+            <a :href="'/view?id='+event.id" class="stretched-link">
               <h5 class="m-0">{{event.title}}</h5>
-            </nux-link>
+            </a>
             <div v-if="event.published" class="pt-2 text-muted text-small mt-auto">
               <i class="fa fa-calendar mr-2"></i>
               {{new Date(event.published).toDateString()}}
