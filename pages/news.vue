@@ -1,11 +1,10 @@
 <template>
   <div class="container bg-white border-top p-3 px-md-5">
-    <div>
-      <span class="h1">News</span>
-      <a href="/news" class="border-left ml-3 pl-3">
-        <i class="fa fa-newspaper-o mr-2"></i> All News
-      </a>
-    </div>
+    <h1 class>
+      <i class="fa fa-newspaper-o mr-2"></i> Latest News
+    </h1>
+    <hr />
+
     <div v-for="article in news.items" :key="article.id" class="d-flex flex-wrap">
       <article class="media position-relative my-2">
         <img src="~~/assets/images/logo-inner.png" class="mr-3 thumb" alt="..." />
@@ -18,6 +17,10 @@
             <span>
               <i class="fa fa-clock-o mr-2"></i>
               {{new Date(article.published).toDateString()}}
+            </span>
+            <span>
+              <i class="fa fa-newspaper-o m-2"></i>
+              <template v-for="label in article.labels">{{" #" + label}}</template>
             </span>
           </div>
         </div>
@@ -60,7 +63,6 @@ export default {
             "&maxResult="
         )
         .then(response => {
-          // JSON responses are automatically parsed.
           this.news = response.data;
           this.loading = false;
         })
