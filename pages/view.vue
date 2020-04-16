@@ -62,7 +62,7 @@ export default {
         .catch(e => {
           console.log(e);
           this.loading = false;
-          $nuxt.error({ statusCode: 400, message: "Teub" });
+          $nuxt.error({ statusCode: 404, message: "Teub" });
         });
     }
   },

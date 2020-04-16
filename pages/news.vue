@@ -9,7 +9,7 @@
       <article class="media position-relative my-2">
         <img src="~~/assets/images/logo-inner.png" class="mr-3 thumb" alt="..." />
         <div class="media-body d-flex flex-column align-items-start">
-          <a :href="'/view?id'+article.id" class="stretched-link">
+          <a :href="'/view?id='+article.id" class="stretched-link">
             <h3 class="m-0">{{article.title}}</h3>
           </a>
           <p
@@ -70,6 +70,7 @@ export default {
         })
         .catch(e => {
           this.errors.push(e);
+          $nuxt.error({ statusCode: 400, message: "Teub" });
         });
     }
   },

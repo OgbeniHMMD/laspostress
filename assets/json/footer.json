@@ -2,15 +2,19 @@
   "quickLinks": [
     {
       "title": "Vision & Mission",
-      "slug": "/vision-mission"
+      "slug": "/about/vision-mission"
     },
     {
       "title": "Photo Gallery",
-      "slug": "/photo-gallery"
+      "slug": "/gallery"
     },
     {
       "title": "Downloads",
       "slug": "/downloads"
+    },
+    {
+      "title": "Carrers",
+      "slug": "/jobs"
     },
     {
       "title": "Knowledge Base (F.A.Q)",
@@ -19,20 +23,20 @@
   ],
   "aboutUs": [
     {
-      "title": "Breif History",
-      "slug": "/history"
+      "title": "Brief History",
+      "slug": "/about/history"
     },
     {
       "title": "Principal Officers",
-      "slug": "/principal-officers"
+      "slug": "/about/principal-officers"
     },
     {
       "title": "Polytechnics Officials",
-      "slug": "/polytechnics-officials"
+      "slug": "/about/polytechnics-officials"
     },
     {
       "title": "Governing Council",
-      "slug": "/governing-council"
+      "slug": "/about/governing-council"
     }
   ],
   "contactUs": [

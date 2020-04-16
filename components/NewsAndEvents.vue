@@ -36,9 +36,9 @@
     <section class="col-12 col-md-5 col-lg-4">
       <header class="mt-3 mt-md-0">
         <span class="h1">Events</span>
-        <nuxt-link to="/events" class="border-left ml-3 pl-3">
+        <a href="/events" class="border-left ml-3 pl-3">
           <i class="fa fa-calendar mr-2"></i> All Events
-        </nuxt-link>
+        </a>
       </header>
 
       <div v-for="event in events.items" :key="event.id">
