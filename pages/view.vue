@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container bg-white border-top p-3 px-md-5">
-      <template v-if="!loading && !error">
+      <template v-if="!loading">
         <h1>{{article.title}}</h1>
         <div class="text-muted mt-auto">
           <span>
@@ -26,10 +26,6 @@
         <i class="fa fa-spinner mr-3"></i>Loading, Please wait...
       </div>
     </div>
-
-    <template v-if="error">
-      <page-not-found />
-    </template>
   </div>
 </template>
 
@@ -38,15 +34,10 @@
 <script>
 import axios from "axios";
 import bloggerJSON from "~/assets/json/blogger.json";
-import PageNotFound from "~/components/PageNotFound.vue";
 
 export default {
-  components: {
-    PageNotFound
-  },
   data: function() {
     return {
-      error: false,
       loading: true,
       article: "",
       bloggerJSON
@@ -71,7 +62,7 @@ export default {
         .catch(e => {
           console.log(e);
           this.loading = false;
-          this.error = true;
+          $nuxt.error({ statusCode: 400, message: "Teub" });
         });
     }
   },
