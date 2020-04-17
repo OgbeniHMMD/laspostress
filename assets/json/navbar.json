@@ -116,11 +116,11 @@
     "children": [
       {
         "title": "Latest News",
-        "slug": "/news"
+        "slug": "/articles?label=news"
       },
       {
         "title": "Past & Upcoming Events",
-        "slug": "/events"
+        "slug": "/articles?label=events"
       },
       {
         "divider": "-"

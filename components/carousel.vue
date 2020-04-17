@@ -21,7 +21,7 @@
         :class="slide.status"
         class="carousel-item"
       >
-        <img class="d-block w-100" :src="slide.img" :alt="slide.title" />
+        <img class="d-block w-100" :src="slide.img" loading="lazy" :alt="slide.title" />
         <div
           v-if="slide.title"
           class="carousel-caption h2 d-none d-md-block"

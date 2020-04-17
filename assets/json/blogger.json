@@ -3,10 +3,12 @@
   "key": "AIzaSyD43jXF8hy8PtQ-B6Jr0VZ9cWnaWoWVGgI",
 
   "newsLabels": "news",
-  "eventsLabels": "event",
+  "eventsLabels": "events",
   "featuredLabel": "featured",
 
   "maxNews": "3",
   "maxEvents": "4",
-  "snippetLenght": "120"
+  "snippetLenght": "120",
+
+  "defaultThumbnail": "/logo-inner.png"
 }

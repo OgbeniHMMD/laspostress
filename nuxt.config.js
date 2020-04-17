@@ -17,23 +17,30 @@ export default {
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
+        async: true,
         defer: true,
         rel: "stylesheet",
         href:
           "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       },
       {
+        async: true,
         defer: true,
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css?family=Roboto&display=swap"
       }
     ],
     script: [
-      { src: "https://code.jquery.com/jquery-3.4.1.slim.min.js", defer: true },
       {
+        defer: true,
+        async: true,
+        src: "https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      },
+      {
+        async: true,
+        defer: true,
         src:
-          "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js",
-        defer: true
+          "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
       }
     ]
   },
