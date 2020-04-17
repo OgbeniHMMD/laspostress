@@ -2,7 +2,6 @@
   <div>
     <div class="container bg-white border-top p-3 p-md-5">
       <the-spinner v-if="loading" />
-
       <template v-if="!loading">
         <h1 class="mt-0">{{article.title}}</h1>
         <div class="text-muted mt-auto">
@@ -57,7 +56,7 @@ export default {
           "https://www.googleapis.com/blogger/v3/blogs/" +
             this.bloggerJSON.id +
             "/posts/" +
-            this.$route.query.id +
+            this.$route.hash.substring(2) +
             "?key=" +
             this.bloggerJSON.key
         )

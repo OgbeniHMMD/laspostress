@@ -18,7 +18,7 @@
         >
           <img :src="bloggerJSON.defaultThumbnail" class="mr-3 thumb" alt="thumbnail" />
           <div class="media-body d-flex flex-column align-items-start">
-            <a :href="'/articles/read?id='+article.id" class="stretched-link">
+            <a :href="'/articles/read/#!'+article.id" class="stretched-link">
               <h3 class="mt-0 mb-2">{{article.title}}</h3>
             </a>
             <p class="lead d-none d-lg-inline">
@@ -66,7 +66,7 @@ export default {
       news: "",
       events: "",
       bloggerJSON,
-      label: this.$route.query.label
+      label: this.$route.hash.substring(2)
     };
   },
   methods: {
