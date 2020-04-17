@@ -3,19 +3,46 @@
     "title": "Admissions",
     "children": [
       {
-        "title": "National Diploma",
-        "slug": "https://applications.laspotech.app/Start.aspx?ApplicationType=ND-FT"
+        "title": "National Diploma (Full Time)",
+        "slug": "/articles/pages/?id=7329245433992373756"
       },
       {
-        "title": "Higher National Diploma",
-        "slug": "https://applications.laspotech.app/Start.aspx?ApplicationType=HND-FT"
+        "title": "National Diploma (SPTS-Day)",
+        "slug": "/articles/pages/?id=0000"
+      },
+      {
+        "title": "National Diploma (SPTS-Evening)",
+        "slug": "/articles/pages/?id=1397670381607358622"
+      },
+      {
+        "title": "National Diploma (SPTS-Regular)",
+        "slug": "/articles/pages/?id=0000"
       },
       {
         "divider": "-"
       },
       {
-        "title": "School Of Part-time Studies",
-        "slug": "https://applications.laspotech.app/"
+        "title": "Higher National Diploma (Full Time)",
+        "slug": "/articles/pages/?id=3113793987407645313"
+      },
+      {
+        "title": "Higher National Diploma (SPTS-Day)",
+        "slug": "/articles/pages/?id=0000"
+      },
+      {
+        "title": "Higher National Diploma (SPTS-Evening)",
+        "slug": "/articles/pages/?id=0000"
+      },
+      {
+        "title": "Higher National Diploma (SPTS-Regular)",
+        "slug": "/articles/pages/?id=0000"
+      },
+      {
+        "divider": "-"
+      },
+      {
+        "title": "Frequently Asked Questions",
+        "slug": "/articles/pages/?id=26352597008126613"
       }
     ]
   },
@@ -55,13 +82,6 @@
       {
         "title": "Sundry Payments",
         "slug": "https://sundrypayments.laspotech.app/"
-      },
-      {
-        "divider": "-"
-      },
-      {
-        "title": "Vacancies",
-        "slug": "/articles/pages/#!00000"
       }
     ]
   },
@@ -70,16 +90,16 @@
     "icon": "fa-graduation-cap",
     "children": [
       {
-        "title": "Schools",
-        "slug": "/academics/schools"
+        "title": "Schools & Departments",
+        "slug": "/articles/pages/?id=2445874334485300029"
       },
       {
-        "title": "Departments",
-        "slug": "/academics/departments"
+        "title": "Research",
+        "slug": "/articles/pages/?id=6175516434918538690"
       },
       {
-        "title": "Calendar (2019/2020)",
-        "slug": "/academics/calendar"
+        "title": "Academic Calendar",
+        "slug": "/articles/pages/?id=8247610284684839014"
       },
       {
         "divider": "-"
@@ -97,11 +117,11 @@
       },
       {
         "title": "Brochure",
-        "slug": "/articles/pages/#!0000"
+        "slug": "/articles/pages/?id=0000"
       },
       {
         "title": "Handbook",
-        "slug": "/articles/pages/#!0000"
+        "slug": "/articles/pages/?id=0000"
       }
     ]
   },
@@ -111,11 +131,11 @@
     "children": [
       {
         "title": "Latest News",
-        "slug": "/articles/#!news"
+        "slug": "/articles/?label=news"
       },
       {
         "title": "Past & Upcoming Events",
-        "slug": "/articles/#!events"
+        "slug": "/articles/?label=events"
       },
       {
         "divider": "-"
@@ -133,30 +153,30 @@
     "children": [
       {
         "title": "Mission & Vision",
-        "slug": "/articles/pages/#!00000"
+        "slug": "/articles/pages/?id=9168221694800079991"
       },
       {
         "title": "Principal Officers",
-        "slug": "/articles/pages/#!00000"
+        "slug": "/articles/pages/?id=00000"
       },
       {
         "title": "Governing Councils",
-        "slug": "/articles/pages/#!00000"
+        "slug": "/articles/pages/?id=00000"
       },
       {
         "divider": "-"
       },
       {
         "title": "Medical Center",
-        "slug": "/articles/pages/#!00000"
+        "slug": "/articles/pages/?id=00000"
       },
       {
         "title": "ICT Unit",
-        "slug": "/articles/pages/#!00000"
+        "slug": "/articles/pages/?id=00000"
       },
       {
         "title": "Security Unit",
-        "slug": "/articles/pages/#!00000"
+        "slug": "/articles/pages/?id=00000"
       },
       {
         "title": "Phot0 Gallery",
@@ -174,11 +194,11 @@
       },
       {
         "title": "Downloads",
-        "slug": "/articles/pages/#!00000"
+        "slug": "/articles/pages/?id=00000"
       },
       {
-        "title": "Knowledge Base (F.A.Q)",
-        "slug": "/articles/pages/#!26352597008126613"
+        "title": "Careers",
+        "slug": "/articles/pages/?id=5807779860722352047"
       }
     ]
   }

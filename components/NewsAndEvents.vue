@@ -3,7 +3,7 @@
     <section class="col-12 col-md-7 col-lg-8">
       <header class="mb-3">
         <span class="h1">News</span>
-        <a :href="'/articles/#!' + bloggerJSON.newsLabels" class="border-left ml-3 pl-3">
+        <a :href="'/articles/?label=' + bloggerJSON.newsLabels" class="border-left ml-3 pl-3">
           <i class="fa fa-newspaper-o mr-2"></i> All News
         </a>
       </header>
@@ -13,18 +13,18 @@
       <div v-for="article in news.items" :key="article.id">
         <article class="d-flex position-relative my-3">
           <img :src="bloggerJSON.defaultThumbnail" class="mr-3 thumb" alt="thumbnail" />
-          <div class="d-flex align-items-start flex-column">
-            <a :href="'/articles/read/#!' + article.id" class="stretched-link">
+          <div class="d-flex justify-content-center justify-content-lg-around flex-column">
+            <a :href="'/articles/read/?id=' + article.id" class="stretched-link">
               <h3 class="mt-0 mb-2">{{article.title}}</h3>
             </a>
-            <p class="lead d-none d-lg-inline">
+            <p class="lead d-none d-lg-inline mb-1">
               {{
               article.content
               .replace(/<[^>]+>/g, '')
               .substring(0, parseInt(bloggerJSON.snippetLenght))
               }}
             </p>
-            <div class="text-muted mt-auto">
+            <div class="text-muted">
               <i class="fa fa-clock-o mr-2"></i>
               <span>
                 {{
@@ -41,7 +41,7 @@
     <section class="col-12 col-md-5 col-lg-4">
       <header class="my-3 mt-md-0">
         <span class="h1">Events</span>
-        <a :href="'/articles/#!' + bloggerJSON.eventsLabels" class="border-left ml-3 pl-3">
+        <a :href="'/articles/?label=' + bloggerJSON.eventsLabels" class="border-left ml-3 pl-3">
           <i class="fa fa-calendar mr-2"></i> All Events
         </a>
       </header>
@@ -62,7 +62,7 @@
             }}
           </div>
           <div class="d-flex flex-column align-items-start">
-            <a :href="'/articles/read/#!' +  event.id" class="stretched-link">
+            <a :href="'/articles/read/?id=' +  event.id" class="stretched-link">
               <h5 class="m-0">{{event.title}}</h5>
             </a>
             <div v-if="event.published" class="pt-2 text-muted text-small mt-auto">
@@ -92,10 +92,10 @@ export default {
   },
   data: function() {
     return {
-      loading: true,
       news: "",
       events: "",
-      bloggerJSON
+      bloggerJSON,
+      loading: true
     };
   },
   methods: {

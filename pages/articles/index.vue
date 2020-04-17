@@ -17,18 +17,18 @@
           class="d-flex position-relative my-3"
         >
           <img :src="bloggerJSON.defaultThumbnail" class="mr-3 thumb" alt="thumbnail" />
-          <div class="media-body d-flex flex-column align-items-start">
-            <a :href="'/articles/read/#!'+article.id" class="stretched-link">
+          <div class="d-flex justify-content-center justify-content-lg-around flex-column">
+            <a :href="'/articles/read/?id='+article.id" class="stretched-link">
               <h3 class="mt-0 mb-2">{{article.title}}</h3>
             </a>
-            <p class="lead d-none d-lg-inline">
+            <p class="lead d-none d-lg-inline mb-1">
               {{
               article.content
               .replace(/<[^>]+>/g, '')
               .substring(0, parseInt(bloggerJSON.snippetLenght))
               }}
             </p>
-            <div class="text-muted mt-auto">
+            <div class="text-muted">
               <span>
                 <i class="fa fa-clock-o mr-2"></i>
                 {{new Date(article.published).toDateString()}}
@@ -66,7 +66,7 @@ export default {
       news: "",
       events: "",
       bloggerJSON,
-      label: this.$route.hash.substring(2)
+      label: this.$route.query.label
     };
   },
   methods: {

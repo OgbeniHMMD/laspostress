@@ -1,42 +1,46 @@
 {
   "quickLinks": [
     {
-      "title": "Vision & Mission",
-      "slug": "/articles/pages/#!0000"
+      "title": "Home",
+      "slug": "/"
+    },
+    {
+      "title": "Mission & Vision",
+      "slug": "/articles/pages/?id=9168221694800079991"
     },
     {
       "title": "Photo Gallery",
-      "slug": "/articles/pages/#!0000"
+      "slug": "/articles/pages/?id=0000"
     },
     {
       "title": "Downloads",
-      "slug": "/articles/pages/#!0000"
+      "slug": "/articles/pages/?id=0000"
     },
     {
       "title": "Carrers",
-      "slug": "/articles/pages/#!0000"
-    },
-    {
-      "title": "Knowledge Base (F.A.Q)",
-      "slug": "/articles/pages/#!26352597008126613"
+      "slug": "/articles/pages/?id=5807779860722352047"
     }
   ],
   "aboutUs": [
     {
       "title": "Brief History",
-      "slug": "/articles/pages/#!7090885379359670222"
+      "slug": "/articles/pages/?id=7090885379359670222"
     },
     {
       "title": "Principal Officers",
-      "slug": "/articles/pages/#!0000"
+      "slug": "/articles/pages/?id=0000"
     },
     {
       "title": "Polytechnics Officials",
-      "slug": "/articles/pages/#!0000"
+      "slug": "/articles/pages/?id=0000"
     },
     {
       "title": "Governing Council",
-      "slug": "/articles/pages/#!0000"
+      "slug": "/articles/pages/?id=0000"
+    },
+    {
+      "title": "Schools & Departments",
+      "slug": "/articles/pages/?id=2445874334485300029"
     }
   ],
   "contactUs": [

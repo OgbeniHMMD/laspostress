@@ -20,7 +20,7 @@
         </div>
 
         <hr class="mt-0" />
-        <article v-html="article.content"></article>
+        <article v-html="article.content" class="lead"></article>
       </template>
     </div>
 
@@ -56,7 +56,7 @@ export default {
           "https://www.googleapis.com/blogger/v3/blogs/" +
             this.bloggerJSON.id +
             "/posts/" +
-            this.$route.hash.substring(2) +
+            this.$route.query.id +
             "?key=" +
             this.bloggerJSON.key
         )
@@ -71,6 +71,11 @@ export default {
           $nuxt.error({ statusCode: 404 });
         });
     }
+  },
+  head() {
+    return {
+      title: this.article.title + " - Lagos State Polytechnic"
+    };
   },
   created() {
     this.fetchArticle();

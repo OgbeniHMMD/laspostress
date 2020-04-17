@@ -8,7 +8,7 @@
 
   "maxNews": "3",
   "maxEvents": "4",
-  "snippetLenght": "120",
+  "snippetLenght": "150",
 
   "defaultThumbnail": "/logo-inner.png"
 }

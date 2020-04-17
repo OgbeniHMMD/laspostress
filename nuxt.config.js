@@ -17,6 +17,11 @@ export default {
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com/",
+        crossorigin: true
+      },
+      {
         async: true,
         defer: true,
         rel: "stylesheet",
@@ -32,8 +37,8 @@ export default {
     ],
     script: [
       {
-        defer: true,
         async: true,
+        defer: true,
         src: "https://code.jquery.com/jquery-3.4.1.slim.min.js"
       },
       {
