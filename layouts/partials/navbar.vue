@@ -62,7 +62,6 @@
             <div v-else class="nav-link dropdown">
               <a
                 role="button"
-                :href="menu.slug"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
