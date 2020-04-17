@@ -14,7 +14,7 @@
         <article class="d-flex position-relative my-3">
           <img :src="bloggerJSON.defaultThumbnail" class="mr-3 thumb" alt="thumbnail" />
           <div class="d-flex align-items-start flex-column">
-            <a :href="'/articles/read?id=' + article.id" class="stretched-link">
+            <a :href="'/articles/read#!' + article.id" class="stretched-link">
               <h3 class="mt-0 mb-2">{{article.title}}</h3>
             </a>
             <p class="lead d-none d-lg-inline">
@@ -62,7 +62,7 @@
             }}
           </div>
           <div class="d-flex flex-column align-items-start">
-            <a :href="'/articles/read?id=' +  event.id" class="stretched-link">
+            <a :href="'/articles/read#!' +  event.id" class="stretched-link">
               <h5 class="m-0">{{event.title}}</h5>
             </a>
             <div v-if="event.published" class="pt-2 text-muted text-small mt-auto">
