@@ -7,7 +7,7 @@
       your opportunity, make your case for how it fits your academic plans, and
       we will help fund it.
     </p>
-    <a href="#" class="btn btn-lg btn-secondary rounded-0 m-2">Learn More</a>
-    <a href="#" class="btn btn-lg btn-secondary rounded-0 m-2">Online Tutor</a>
+    <a class="btn btn-lg btn-secondary rounded-0 m-2" href="/pages/?id=0000">Learn More</a>
+    <a class="btn btn-lg btn-secondary rounded-0 m-2" href="/pages/?id=0000">Online Tutor</a>
   </div>
 </template>
