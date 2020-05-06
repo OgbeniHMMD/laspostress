@@ -1,6 +1,6 @@
 {
   "name": "Laspostress",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "The Polytechninc Of Excellence",
   "author": "Olajide A. Hammed",
   "private": true,
@@ -13,11 +13,10 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.9.7",
-    "nuxt": "^2.0.0"
-  },
-  "devDependencies": {
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
+    "nuxt": "^2.0.0",
     "push-dir": "^0.4.1",
     "sass-loader": "^8.0.2"
-  }
+  },
+  "devDependencies": {}
 }
