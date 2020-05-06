@@ -32,9 +32,15 @@
 
     <div class="bg-primary border-top text-monospace">
       <div class="container-fluid row align-items-center p-3 p-md-3 m-0">
-        <div
-          class="col-100 col-md-6 text-center text-md-left"
-        >Copyright © 2020 Lagos State Polytechnic. All rights reserved.</div>
+        <div class="col-100 col-md-6 text-center text-md-left">
+          <p>
+            &copy; Lagos State Polytechnic. Designed by
+            <a
+              class="text-white"
+              href="//www.hmmd.xyz"
+            >Olajide A. Hammed</a>
+          </p>
+        </div>
 
         <div class="col-100 col-md-6 pt-3 pt-md-0">
           <div class="d-flex justify-content-around justify-content-md-end">
