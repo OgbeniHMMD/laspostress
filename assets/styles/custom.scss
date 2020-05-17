@@ -3,7 +3,7 @@ body {
   font-family: "Cuprum", $font-family-sans-serif;
 }
 
-//The slant around the Logo
+//  The slant around the Logo
 .slant {
   -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
   clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
@@ -16,18 +16,18 @@ body {
   max-height: 75px;
 }
 
-//News Thumbnails
+//  News Thumbnails
 .thumb {
   max-height: 75px;
 }
 
 @include media-breakpoint-up(md) {
-  //News Thumbnails
+  //  News Thumbnails
   .thumb {
     max-height: 150px;
   }
 
-  //Hover on dropdown
+  //  Hover on dropdown
   header {
     .dropdown-menu a:hover {
       color: $primary !important;
