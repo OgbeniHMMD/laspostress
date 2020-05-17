@@ -1,8 +1,9 @@
 <template>
   <div>
     <div class="container bg-white border-top p-3 p-md-5">
-      <the-spinner v-if="loading" />
-      <template v-if="!loading">
+      <the-spinner v-if="spinner" />
+
+      <template v-if="!spinner">
         <h1 class="mt-0">{{article.title}}</h1>
         <div class="text-muted mt-auto">
           <span>
@@ -32,8 +33,6 @@
 
 <script>
 import axios from "axios";
-import bloggerJSON from "~/assets/json/blogger.json";
-
 import TheSpinner from "~/components/TheSpinner.vue";
 import JoinOurPoly from "~/components/JoinOurPoly.vue";
 
@@ -44,37 +43,26 @@ export default {
   },
   data: function() {
     return {
-      loading: true,
-      article: "",
-      bloggerJSON
+      article: [],
+      spinner: true
     };
   },
   methods: {
     async fetchArticle() {
       axios
         .get(
-          "https://www.googleapis.com/blogger/v3/blogs/" +
-            this.bloggerJSON.id +
-            "/posts/" +
-            this.$route.query.id +
-            "?key=" +
-            this.bloggerJSON.key
+          `${process.env.bloggerURL}/${process.env.bloggerId}/posts/${this.$route.query.id}?key=${process.env.bloggerKey}`
         )
         .then(response => {
-          // JSON responses are automatically parsed.
           this.article = response.data;
-          this.loading = false;
+          this.spinner = false;
         })
-        .catch(e => {
-          console.log(e);
-          this.loading = false;
-          $nuxt.error({ statusCode: 404 });
-        });
+        .catch(e => $nuxt.error({ message: e.message }));
     }
   },
   head() {
     return {
-      title: this.article.title + " - Lagos State Polytechnic"
+      title: `${this.article.title}  - Lagos State Polytechnic}`
     };
   },
   created() {

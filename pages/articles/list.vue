@@ -8,39 +8,37 @@
         </span>
       </header>
 
-      <the-spinner v-if="loading" />
+      <the-spinner v-if="spinner" />
 
-      <div>
-        <article
-          v-for="article in news.items"
-          :key="article.id"
-          class="d-flex position-relative my-3"
-        >
-          <img :src="bloggerJSON.defaultThumbnail" class="mr-3 thumb" alt="thumbnail" />
-          <div class="d-flex justify-content-center justify-content-lg-around flex-column">
-            <a :href="'/articles/?id='+article.id" class="stretched-link">
-              <h3 class="mt-0 mb-2">{{article.title}}</h3>
-            </a>
-            <p class="lead d-none d-lg-inline mb-1">
-              {{
-              article.content
-              .replace(/<[^>]+>/g, '')
-              .substring(0, parseInt(bloggerJSON.snippetLenght))
-              }}
-            </p>
-            <div class="text-muted">
-              <span>
-                <i class="fa fa-clock-o mr-2"></i>
-                {{new Date(article.published).toDateString()}}
-              </span>
-              <span>
-                <i class="fa fa-tags m-2"></i>
-                <template v-for="label in article.labels">{{" #" + label}}</template>
-              </span>
-            </div>
+      <article
+        v-for="article in news.items"
+        :key="article.id"
+        class="d-flex position-relative my-3"
+      >
+        <img :src="bloggerJSON.defaultThumbnail" class="mr-3 thumb" alt="thumbnail" />
+        <div class="d-flex justify-content-center justify-content-lg-around flex-column">
+          <a :href="'/articles/?id='+article.id" class="stretched-link">
+            <h3 class="mt-0 mb-2">{{article.title}}</h3>
+          </a>
+          <p class="lead d-none d-lg-inline mb-1">
+            {{
+            article.content
+            .replace(/<[^>]+>/g, '')
+            .substring(0, parseInt(bloggerJSON.snippetLenght))
+            }}
+          </p>
+          <div class="text-muted">
+            <span>
+              <i class="fa fa-clock-o mr-2"></i>
+              {{new Date(article.published).toDateString()}}
+            </span>
+            <span>
+              <i class="fa fa-tags m-2"></i>
+              <template v-for="label in article.labels">{{" #" + label}}</template>
+            </span>
           </div>
-        </article>
-      </div>
+        </div>
+      </article>
     </div>
 
     <join-our-poly />
@@ -51,7 +49,6 @@
 <script>
 import axios from "axios";
 import bloggerJSON from "~/assets/json/blogger.json";
-
 import TheSpinner from "~/components/TheSpinner.vue";
 import JoinOurPoly from "~/components/JoinOurPoly.vue";
 
@@ -62,10 +59,10 @@ export default {
   },
   data: function() {
     return {
-      loading: true,
       news: "",
       events: "",
       bloggerJSON,
+      spinner: true,
       label: this.$route.query.label
     };
   },
@@ -73,24 +70,13 @@ export default {
     async fetchNews() {
       axios
         .get(
-          "https://www.googleapis.com/blogger/v3/blogs/" +
-            this.bloggerJSON.id +
-            "/posts" +
-            "?key=" +
-            this.bloggerJSON.key +
-            "&labels=" +
-            this.label +
-            "&maxResult="
+          `${process.env.bloggerURL}/${process.env.bloggerId}/posts?key=${process.env.bloggerKey}&labels=${this.label}&maxResult=${this.bloggerJSON.maxNews}`
         )
         .then(response => {
           this.news = response.data;
-          this.loading = false;
+          this.spinner = false;
         })
-        .catch(e => {
-          this.errors.push(e);
-          this.loading = false;
-          $nuxt.error({ statusCode: 404 });
-        });
+        .catch(e => $nuxt.error({ message: e.message }));
     }
   },
   created() {
@@ -98,7 +84,7 @@ export default {
   },
   head() {
     return {
-      title: "Latest " + this.label + " - Lagos State Polytechnic"
+      title: `Latest - ${this.label} - Lagos State Polytechnic`
     };
   }
 };

@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="container bg-white border-top p-3 p-md-5">
-      <the-spinner v-if="loading" />
+      <the-spinner v-if="spinner" />
 
-      <template v-if="!loading">
+      <template v-if="!spinner">
         <h1 class="mt-0 mb-3">{{article.title}}</h1>
         <article v-html="article.content" class="lead"></article>
       </template>
@@ -12,7 +12,6 @@
     <join-our-poly />
   </div>
 </template>
-
 
 
 <script>
@@ -29,32 +28,22 @@ export default {
   },
   data: function() {
     return {
-      loading: true,
       article: "",
-      bloggerJSON
+      bloggerJSON,
+      spinner: true
     };
   },
   methods: {
     async fetchArticle() {
       axios
         .get(
-          "https://www.googleapis.com/blogger/v3/blogs/" +
-            this.bloggerJSON.id +
-            "/pages/" +
-            this.$route.query.id +
-            "?key=" +
-            this.bloggerJSON.key
+          `${process.env.bloggerURL}/${process.env.bloggerId}/pages/${this.$route.query.id}?key=${process.env.bloggerKey}`
         )
         .then(response => {
-          // JSON responses are automatically parsed.
           this.article = response.data;
-          this.loading = false;
+          this.spinner = false;
         })
-        .catch(e => {
-          console.log(e);
-          this.loading = false;
-          $nuxt.error({ statusCode: 404 });
-        });
+        .catch(e => $nuxt.error({ message: e.message }));
     }
   },
   head() {

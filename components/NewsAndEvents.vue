@@ -3,18 +3,21 @@
     <section class="col-12 col-md-7 col-lg-8">
       <header class="mb-3">
         <span class="h1">News</span>
-        <a :href="'/articles/list/?label=' + bloggerJSON.newsLabels" class="border-left ml-3 pl-3">
+        <a
+          :href="`/articles/list/?label=${bloggerJSON.newsLabels}`"
+          class="border-left lead ml-3 pl-3"
+        >
           <i class="fa fa-newspaper-o mr-2"></i> All News
         </a>
       </header>
 
-      <the-spinner v-if="loading" />
+      <the-spinner v-if="spinner" />
 
       <div v-for="article in news.items" :key="article.id">
         <article class="d-flex position-relative my-3">
           <img :src="bloggerJSON.defaultThumbnail" class="mr-3 thumb" alt="thumbnail" />
           <div class="d-flex justify-content-center justify-content-lg-around flex-column">
-            <a :href="'/articles/?id=' + article.id" class="stretched-link">
+            <a :href="`/articles/?id=${article.id}`" class="stretched-link">
               <h3 class="mt-0 mb-2">{{article.title}}</h3>
             </a>
             <p class="lead d-none d-lg-inline mb-1">
@@ -42,14 +45,14 @@
       <header class="my-3 mt-md-0">
         <span class="h1">Events</span>
         <a
-          :href="'/articles/list/?label=' + bloggerJSON.eventsLabels"
-          class="border-left ml-3 pl-3"
+          :href="`/articles/list/?label=${bloggerJSON.eventsLabels}`"
+          class="border-left lead ml-3 pl-3"
         >
           <i class="fa fa-calendar mr-2"></i> All Events
         </a>
       </header>
 
-      <the-spinner v-if="loading" />
+      <the-spinner v-if="spinner" />
 
       <section v-for="event in events.items" :key="event.id">
         <article class="d-flex position-relative p-0 m-1 py-2">
@@ -65,7 +68,7 @@
             }}
           </div>
           <div class="d-flex flex-column align-items-start">
-            <a :href="'/articles/?id=' +  event.id" class="stretched-link">
+            <a :href="`/articles/?id=${event.id}`" class="stretched-link">
               <h5 class="m-0">{{event.title}}</h5>
             </a>
             <div v-if="event.published" class="pt-2 text-muted text-small mt-auto">
@@ -95,62 +98,31 @@ export default {
   },
   data: function() {
     return {
-      news: "",
-      events: "",
+      news: [],
+      events: [],
       bloggerJSON,
-      loading: true
+      spinner: true
     };
   },
   methods: {
     async fetchNews() {
       axios
         .get(
-          "https://www.googleapis.com/blogger/v3/blogs/" +
-            this.bloggerJSON.id +
-            "/posts" +
-            "?key=" +
-            this.bloggerJSON.key +
-            "&labels=" +
-            this.bloggerJSON.newsLabels +
-            "," +
-            this.bloggerJSON.featuredLabel +
-            "&maxResult=" +
-            this.bloggerJSON.maxNews
+          `${process.env.bloggerURL}/${process.env.bloggerId}/posts?key=${process.env.bloggerKey}&labels=${this.bloggerJSON.newsLabels},${this.bloggerJSON.featuredLabel}&maxResult=${this.bloggerJSON.maxNews}`
         )
-        .then(response => {
-          // JSON responses are automatically parsed.
-          this.news = response.data;
-        })
-        .catch(e => {
-          this.errors.push(e);
-        });
+        .then(response => (this.news = response.data))
+        .catch(e => this.errors.push(e));
     },
     async fetchEvents() {
-      //
-      //REF: https://alligator.io/vuejs/rest-api-axios/
-      //
       axios
         .get(
-          "https://www.googleapis.com/blogger/v3/blogs/" +
-            this.bloggerJSON.id +
-            "/posts" +
-            "?key=" +
-            this.bloggerJSON.key +
-            "&labels=" +
-            this.bloggerJSON.eventsLabels +
-            "," +
-            this.bloggerJSON.featuredLabel +
-            "&maxResult=" +
-            this.bloggerJSON.maxEvents
+          `${process.env.bloggerURL}/${process.env.bloggerId}/posts?key=${process.env.bloggerKey}&labels=${this.bloggerJSON.eventsLabels},${this.bloggerJSON.featuredLabel}&maxResult=${this.bloggerJSON.maxEvents}`
         )
         .then(response => {
-          // JSON responses are automatically parsed.
           this.events = response.data;
-          this.loading = false;
+          this.spinner = false;
         })
-        .catch(e => {
-          this.errors.push(e);
-        });
+        .catch(e => $nuxt.error({ message: e.message }));
     }
   },
   created() {

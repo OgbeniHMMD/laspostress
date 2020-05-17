@@ -17,16 +17,6 @@ export default {
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com/",
-        crossorigin: true
-      },
-      {
-        rel: "stylesheet",
-        href:
-          "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      },
-      {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css?family=Cuprum&display=swap"
       }
@@ -38,8 +28,20 @@ export default {
       {
         src:
           "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+      },
+      {
+        crossorigin: "anonymous",
+        src: "https://kit.fontawesome.com/57b5a4abc3.js"
       }
     ]
+  },
+  env: {
+    name: process.env.npm_package_name,
+    description: process.env.npm_package_description,
+
+    bloggerId: "4656669091149423564",
+    bloggerKey: "AIzaSyD43jXF8hy8PtQ-B6Jr0VZ9cWnaWoWVGgI",
+    bloggerURL: "https://www.googleapis.com/blogger/v3/blogs"
   },
   /*
    ** Customize the progress-bar color
