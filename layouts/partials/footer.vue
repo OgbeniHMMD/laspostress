@@ -36,7 +36,7 @@
           <p>
             &copy; Lagos State Polytechnic. Designed by
             <a
-              class="text-white"
+              class="text-light"
               href="//www.hmmd.xyz"
             >Olajide A. Hammed</a>
           </p>
