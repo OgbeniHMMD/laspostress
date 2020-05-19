@@ -61,7 +61,7 @@
 
 
 <script>
-import footerJSON from "~/assets/json/footer.json";
+import footerJSON from "~/assets/json/FooterLinks.json";
 
 export default {
   data: function() {

@@ -89,7 +89,7 @@
 
 <script>
 import axios from "axios";
-import bloggerJSON from "~/assets/json/blogger.json";
+import bloggerJSON from "~/assets/json/BloggerSettings.json";
 import TheSpinner from "~/components/TheSpinner.vue";
 
 export default {

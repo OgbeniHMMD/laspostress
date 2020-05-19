@@ -35,6 +35,15 @@ body {
     .dropdown:hover .dropdown-menu {
       display: block;
     }
+    .dropdown-menu {
+      margin-top: 0;
+      color: $white;
+      border-color: $light;
+      background-color: $secondary;
+      a {
+        color: $white;
+      }
+    }
     .avoid-sticky:active {
       pointer-events: none; /*Without this, clicking will make it sticky*/
     }

@@ -5,45 +5,45 @@
     "children": [
       {
         "title": "National Diploma (Full Time)",
-        "slug": "/pages/?id=7329245433992373756"
+        "url": "/pages/?id=7329245433992373756"
       },
       {
         "title": "National Diploma (SPTS-Day)",
-        "slug": "/pages/?id=0000"
+        "url": "/pages/?id=0000"
       },
       {
         "title": "National Diploma (SPTS-Evening)",
-        "slug": "/pages/?id=1397670381607358622"
+        "url": "/pages/?id=1397670381607358622"
       },
       {
         "title": "National Diploma (SPTS-Regular)",
-        "slug": "/pages/?id=0000"
+        "url": "/pages/?id=0000"
       },
       {
         "divider": "-"
       },
       {
         "title": "Higher National Diploma (Full Time)",
-        "slug": "/pages/?id=3113793987407645313"
+        "url": "/pages/?id=3113793987407645313"
       },
       {
         "title": "Higher National Diploma (SPTS-Day)",
-        "slug": "/pages/?id=0000"
+        "url": "/pages/?id=0000"
       },
       {
         "title": "Higher National Diploma (SPTS-Evening)",
-        "slug": "/pages/?id=0000"
+        "url": "/pages/?id=0000"
       },
       {
         "title": "Higher National Diploma (SPTS-Regular)",
-        "slug": "/pages/?id=0000"
+        "url": "/pages/?id=0000"
       },
       {
         "divider": "-"
       },
       {
         "title": "Frequently Asked Questions",
-        "slug": "/pages/?id=26352597008126613"
+        "url": "/pages/?id=26352597008126613"
       }
     ]
   },
@@ -53,36 +53,36 @@
     "children": [
       {
         "title": "Application portal",
-        "slug": "//applications.laspotech.app/"
+        "url": "//applications.laspotech.app/"
       },
       {
         "title": "Post UTME portal",
-        "slug": "//applications.laspotech.app/Start.aspx?ApplicationType=ND-FT"
+        "url": "//applications.laspotech.app/Start.aspx?ApplicationType=ND-FT"
       },
       {
         "divider": "-"
       },
       {
         "title": "Students Portal",
-        "slug": "//studentportal.laspotech.app/"
+        "url": "//studentportal.laspotech.app/"
       },
       {
         "divider": "-"
       },
       {
         "title": "Staff Email",
-        "slug": "//mail.ionos.com/"
+        "url": "//mail.ionos.com/"
       },
       {
         "title": "Staff Appraisal",
-        "slug": "//staff.laspotech.app/"
+        "url": "//staff.laspotech.app/"
       },
       {
         "divider": "-"
       },
       {
         "title": "Sundry Payments",
-        "slug": "//sundrypayments.laspotech.app/"
+        "url": "//sundrypayments.laspotech.app/"
       }
     ]
   },
@@ -92,37 +92,37 @@
     "children": [
       {
         "title": "Schools & Departments",
-        "slug": "/pages/?id=2445874334485300029"
+        "url": "/pages/?id=2445874334485300029"
       },
       {
         "title": "Research",
-        "slug": "//laspotechlibrary.net/electronic-resources/academic-research/"
+        "url": "//laspotechlibrary.net/electronic-resources/academic-research/"
       },
       {
         "title": "Academic Calendar",
-        "slug": "/pages/?id=8247610284684839014"
+        "url": "/pages/?id=8247610284684839014"
       },
       {
         "divider": "-"
       },
       {
         "title": "Nd Curricula",
-        "slug": "//net.nbte.gov.ng/nd%20curricula"
+        "url": "//net.nbte.gov.ng/nd%20curricula"
       },
       {
         "title": "HND Curricula",
-        "slug": "//net.nbte.gov.ng/hnd%20curricula"
+        "url": "//net.nbte.gov.ng/hnd%20curricula"
       },
       {
         "divider": "-"
       },
       {
         "title": "Brochure",
-        "slug": "/pages/?id=0000"
+        "url": "/pages/?id=0000"
       },
       {
         "title": "Handbook",
-        "slug": "/pages/?id=0000"
+        "url": "/pages/?id=0000"
       }
     ]
   },
@@ -132,18 +132,18 @@
     "children": [
       {
         "title": "Latest News",
-        "slug": "/articles/list/?label=news"
+        "url": "/articles/list/?label=news"
       },
       {
         "title": "Past & Upcoming Events",
-        "slug": "/articles/list/?label=events"
+        "url": "/articles/list/?label=events"
       },
       {
         "divider": "-"
       },
       {
         "title": "Photo Gallery",
-        "slug": "/gallery"
+        "url": "/gallery"
       }
     ]
   },
@@ -154,52 +154,52 @@
     "children": [
       {
         "title": "Mission & Vision",
-        "slug": "/pages/?id=9168221694800079991"
+        "url": "/pages/?id=9168221694800079991"
       },
       {
         "title": "Principal Officers",
-        "slug": "/pages/?id=6940347850791509749"
+        "url": "/pages/?id=6940347850791509749"
       },
       {
         "title": "Governing Councils",
-        "slug": "/pages/?id=00000"
+        "url": "/pages/?id=00000"
       },
       {
         "divider": "-"
       },
       {
         "title": "Library",
-        "slug": "//laspotechlibrary.net"
+        "url": "//laspotechlibrary.net"
       },
       {
         "title": "Medical Center",
-        "slug": "/pages/?id=00000"
+        "url": "/pages/?id=00000"
       },
       {
         "title": "ICT Unit",
-        "slug": "/pages/?id=00000"
+        "url": "/pages/?id=00000"
       },
       {
         "title": "Security Unit",
-        "slug": "/pages/?id=00000"
+        "url": "/pages/?id=00000"
       },
       {
         "divider": "-"
       },
       {
         "title": "LaspoKonsult",
-        "slug": "http://laspotechkonsult.com/"
+        "url": "http://laspotechkonsult.com/"
       },
       {
         "divider": "-"
       },
       {
         "title": "Downloads",
-        "slug": "/pages/?id=00000"
+        "url": "/pages/?id=00000"
       },
       {
         "title": "Careers",
-        "slug": "/pages/?id=5807779860722352047"
+        "url": "/pages/?id=5807779860722352047"
       }
     ]
   }

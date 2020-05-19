@@ -6,16 +6,17 @@
   </div>
 </template>
 
-<style lang="sass">
-@import "~/assets/styles/variables.scss"
-@import "~/assets/styles/bootstrap/bootstrap.scss"
-@import "~/assets/styles/custom.scss"
+<style lang="scss">
+@import "~/assets/styles/variables.scss";
+@import "bootstrap/scss/bootstrap.scss";
+@import "bootstrap-vue/src/index.scss";
+@import "~/assets/styles/custom.scss";
 </style>
 
 
 <script>
-import TheHeader from "./partials/navbar.vue";
-import TheFooter from "./partials/footer.vue";
+import TheHeader from "./partials/TheHeader.vue";
+import TheFooter from "./partials/TheFooter.vue";
 export default {
   components: {
     TheHeader,

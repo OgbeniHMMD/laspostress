@@ -48,7 +48,7 @@
 
 <script>
 import axios from "axios";
-import bloggerJSON from "~/assets/json/blogger.json";
+import bloggerJSON from "~/assets/json/BloggerSettings.json";
 
 import TheSpinner from "~/components/TheSpinner.vue";
 import JoinOurPoly from "~/components/JoinOurPoly.vue";
