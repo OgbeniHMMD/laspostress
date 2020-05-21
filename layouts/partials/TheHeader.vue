@@ -1,6 +1,6 @@
 <template>
   <header class="text-uppercase m-0 p-0">
-    <b-navbar toggleable="lg" type="dark" variant="primary" class="p-0">
+    <b-navbar toggleable="lg" type="dark" variant="primary" class="border-bottom p-0">
       <div class="slant p-1 pl-sm-3 pr-5 bg-light align-self-start p-auto">
         <div class="d-flex align-items-center">
           <a href="/">
@@ -22,7 +22,7 @@
         <div class="input-group input-group-lg nav-item">
           <input
             type="search"
-            class="form-control border-light"
+            class="form-control border-light shadow-none"
             placeholder="Search"
             aria-label="Search"
             aria-describedby="button-addon1"
@@ -36,9 +36,13 @@
       </div>
     </b-navbar>
 
-    <b-navbar toggleable="lg" type="dark" variant="secondary" class="border-top border-bottom p-1">
-      <b-collapse is-nav id="nav-collapse" class="justify-content-around align-items-center">
-        <b-navbar-nav v-for="menu in menuJSON" :key="menu.id">
+    <b-navbar toggleable="lg" type="dark" variant="secondary" class="p-0">
+      <b-collapse
+        is-nav
+        id="nav-collapse"
+        class="justify-content-around align-items-center border-bottom"
+      >
+        <b-navbar-nav v-for="menu in menuJSON" :key="menu.id" class="m-2">
           <b-nav-item
             v-if="!menu.children"
             :href="menu.url"
@@ -60,7 +64,7 @@
 
             <template v-for="child in menu.children">
               <b-dropdown-divider v-if="child.divider" :key="child.id"></b-dropdown-divider>
-              <b-dropdown-item else :key="child.id" :href="child.url">{{child.title}}</b-dropdown-item>
+              <b-dropdown-item v-else :key="child.id" :href="child.url">{{child.title}}</b-dropdown-item>
             </template>
           </b-nav-item-dropdown>
         </b-navbar-nav>
